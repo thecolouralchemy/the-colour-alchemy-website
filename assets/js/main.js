@@ -841,7 +841,7 @@ function setupAlchemyAssistant() {
 
 
   const mascotSrc =
-    "assets/img/whatsapp/tca-cartoon-boy.png";
+    "assets/img/whatsapp/tca-cartoon-boy-widjet.png";
 
 
   const whatsappUrl =
