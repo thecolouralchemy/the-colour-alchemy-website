@@ -284,3 +284,193 @@ document.addEventListener("DOMContentLoaded", () => {
   setupScrollReveals();
   setupPageTransitions();
 });
+
+/* =========================================================
+   ALCHY — THE COLOUR ALCHEMY WHATSAPP GUIDE
+   Injected on every page that loads main.js.
+   ========================================================= */
+
+function setupAlchemyAssistant() {
+  /* Remove older floating WhatsApp variants so only Alchy appears. */
+  document.querySelectorAll(
+    ".whatsapp-float, .tca-whatsapp-widget, .tca-wa-widget, #tcaWhatsappWidget"
+  ).forEach((node) => node.remove());
+
+  if (document.getElementById("tcaAssistWidget")) return;
+
+  const mascotSrc = "assets/img/whatsapp/tca-cartoon-boy.jpeg";
+  const whatsappUrl =
+    "https://wa.me/94711222863?text=" +
+    encodeURIComponent(
+      "Hi Alchy 👋 I'd like help choosing the right paint or colour for my project."
+    );
+
+  const markup = `
+    <div class="tca-assist-widget" id="tcaAssistWidget">
+
+      <div class="tca-assist-teaser" id="tcaAssistTeaser" aria-hidden="true">
+        <button
+          type="button"
+          class="tca-assist-teaser-card"
+          id="tcaAssistTeaserOpen"
+          aria-label="Ask Alchy for paint and colour help"
+        >
+          <span class="tca-assist-teaser-line">
+            <span class="tca-assist-online-dot" aria-hidden="true"></span>
+            <span class="tca-assist-teaser-copy">
+              Hi, I'm <strong>Alchy.</strong> Let's find the perfect paint for your project.
+            </span>
+          </span>
+        </button>
+
+        <button
+          type="button"
+          class="tca-assist-teaser-close"
+          id="tcaAssistTeaserClose"
+          aria-label="Close Alchy greeting"
+        >
+          <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div
+        class="tca-assist-panel"
+        id="tcaAssistPanel"
+        aria-hidden="true"
+        role="dialog"
+        aria-label="Alchy paint and colour assistant"
+      >
+        <div class="tca-assist-header">
+          <div class="tca-assist-header-avatar" aria-hidden="true">
+            <img src="${mascotSrc}" alt="">
+          </div>
+
+          <div class="tca-assist-header-copy">
+            <strong>Alchy</strong>
+            <span>The Colour Alchemy · Colour Guide</span>
+          </div>
+
+          <button
+            type="button"
+            class="tca-assist-panel-close"
+            id="tcaAssistPanelClose"
+            aria-label="Close Alchy assistant"
+          >
+            <i class="bi bi-x-lg" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="tca-assist-body">
+          <div class="tca-assist-message">
+            <span class="tca-assist-message-name">Alchy</span>
+            <p>Hi there! 👋</p>
+            <p>Need help choosing paint, colours or preparation products?</p>
+          </div>
+        </div>
+
+        <div class="tca-assist-footer">
+          <a
+            class="tca-assist-whatsapp"
+            href="${whatsappUrl}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-whatsapp" aria-hidden="true"></i>
+            <span>Continue on WhatsApp</span>
+          </a>
+          <small>Opens a chat with The Colour Alchemy team</small>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="tca-assist-launcher"
+        id="tcaAssistLauncher"
+        aria-label="Open Alchy paint and colour assistant"
+        aria-expanded="false"
+      >
+        <span class="tca-assist-launcher-avatar">
+          <img src="${mascotSrc}" alt="Alchy, The Colour Alchemy guide">
+        </span>
+        <span class="tca-assist-wa-badge" aria-hidden="true">
+          <i class="bi bi-whatsapp"></i>
+        </span>
+      </button>
+
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML("beforeend", markup);
+
+  const widget = document.getElementById("tcaAssistWidget");
+  const launcher = document.getElementById("tcaAssistLauncher");
+  const panel = document.getElementById("tcaAssistPanel");
+  const panelClose = document.getElementById("tcaAssistPanelClose");
+  const teaser = document.getElementById("tcaAssistTeaser");
+  const teaserOpen = document.getElementById("tcaAssistTeaserOpen");
+  const teaserClose = document.getElementById("tcaAssistTeaserClose");
+
+  if (!widget || !launcher || !panel) return;
+
+  let teaserDismissed = false;
+
+  function hideTeaser() {
+    if (!teaser) return;
+    teaser.classList.remove("is-visible");
+    teaser.setAttribute("aria-hidden", "true");
+  }
+
+  function showTeaser() {
+    if (!teaser || teaserDismissed || panel.classList.contains("is-open")) return;
+    teaser.classList.add("is-visible");
+    teaser.setAttribute("aria-hidden", "false");
+  }
+
+  function openPanel() {
+    hideTeaser();
+    panel.classList.add("is-open");
+    panel.setAttribute("aria-hidden", "false");
+    launcher.setAttribute("aria-expanded", "true");
+  }
+
+  function closePanel() {
+    panel.classList.remove("is-open");
+    panel.setAttribute("aria-hidden", "true");
+    launcher.setAttribute("aria-expanded", "false");
+  }
+
+  launcher.addEventListener("click", () => {
+    panel.classList.contains("is-open") ? closePanel() : openPanel();
+  });
+
+  panelClose?.addEventListener("click", closePanel);
+  teaserOpen?.addEventListener("click", openPanel);
+
+  teaserClose?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    teaserDismissed = true;
+    hideTeaser();
+  });
+
+  document.querySelectorAll("[data-alchy-open]").forEach((button) => {
+    button.addEventListener("click", openPanel);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!panel.classList.contains("is-open")) return;
+    if (widget.contains(event.target)) return;
+    if (event.target.closest("[data-alchy-open]")) return;
+    closePanel();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closePanel();
+  });
+
+  window.setTimeout(showTeaser, 1600);
+  window.setTimeout(() => {
+    if (!panel.classList.contains("is-open")) hideTeaser();
+  }, 12600);
+}
+
+document.addEventListener("DOMContentLoaded", setupAlchemyAssistant);
