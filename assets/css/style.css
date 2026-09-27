@@ -3243,3 +3243,152 @@ button.active {
     transform: none;
   }
 }
+/* =========================================================
+   MOBILE RESPONSIVE IMPROVEMENTS
+   Product cards + homepage hero
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+  /* ---------------------------------------------------------
+     HOMEPAGE HERO — keep the image visible on mobile
+     --------------------------------------------------------- */
+
+  .home-hero {
+    min-height: 620px;
+  }
+
+  .home-hero-image {
+    inset: 0;
+  }
+
+  .home-hero-slide,
+  .home-hero-image img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .home-hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(10, 10, 10, 0.34) 0%,
+        rgba(10, 10, 10, 0.48) 32%,
+        rgba(10, 10, 10, 0.78) 67%,
+        rgba(10, 10, 10, 0.96) 100%
+      );
+  }
+
+  .home-hero-inner {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .home-hero-copy {
+    max-width: 100%;
+  }
+
+  .home-hero-copy h1 {
+    font-size: clamp(2.6rem, 12vw, 3.6rem);
+    line-height: 1;
+  }
+
+
+  /* ---------------------------------------------------------
+     PRODUCT GRID — 2 cards per row on phones
+     --------------------------------------------------------- */
+
+  #products-grid,
+  #featured-products-grid {
+    --bs-gutter-x: 0.8rem;
+    --bs-gutter-y: 0.9rem;
+  }
+
+  #products-grid > *,
+  #featured-products-grid > * {
+    width: 50%;
+    flex: 0 0 auto;
+  }
+
+  .product-card {
+    height: 100%;
+  }
+
+  .product-card .product-image {
+    aspect-ratio: 1 / 1;
+  }
+
+  .product-card .product-image img {
+    padding: 0.35rem;
+  }
+
+  .product-card .product-body {
+    padding: 0.85rem;
+  }
+
+  .product-card .product-badges {
+    gap: 0.3rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .badge-pill {
+    font-size: 0.57rem;
+    padding: 0.18rem 0.4rem;
+  }
+
+  .product-card .product-name {
+    font-size: 0.95rem;
+    line-height: 1.25;
+    margin-bottom: 0.4rem;
+  }
+
+  .product-card .product-desc {
+    font-size: 0.76rem;
+    line-height: 1.45;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    overflow: hidden;
+
+    min-height: calc(1.45em * 2);
+    max-height: calc(1.45em * 2);
+  }
+
+  .product-card .product-avail {
+    font-size: 0.68rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .product-card .product-actions {
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .product-card .product-actions .btn-alchemy-outline,
+  .product-card .product-actions .btn-whatsapp-solid {
+    width: 100%;
+    flex: none;
+    min-height: 36px;
+    padding: 0.45rem 0.35rem;
+    font-size: 0.62rem;
+    line-height: 1.2;
+  }
+}
+
+
+/* Extra-small phones */
+@media (max-width: 359.98px) {
+
+  #products-grid > *,
+  #featured-products-grid > * {
+    width: 100%;
+  }
+
+  .product-card {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
