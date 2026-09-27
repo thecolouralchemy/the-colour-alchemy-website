@@ -4067,584 +4067,1503 @@ button.active {
 }
 
 /* =========================================================
-   ASK ALCHY — HOMEPAGE GUIDE BANNER
-   Uses the original user-supplied mascot image unchanged.
+   ASK ALCHY — FINAL CLEAN VERSION
+   Replace every old Alchy CSS block with this one block.
+   ========================================================= */
+
+
+/* =========================================================
+   HOMEPAGE ASK ALCHY SECTION
    ========================================================= */
 
 .alchy-guide-section {
-  padding-top: clamp(2.5rem, 5vw, 4.5rem);
-  padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  padding-top: clamp(2.4rem, 4vw, 3.8rem);
+  padding-bottom: clamp(2.4rem, 4vw, 3.8rem);
 }
+
 
 .alchy-guide-card {
   position: relative;
+
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-  min-height: 360px;
+  grid-template-columns:
+    minmax(0, 1.12fr)
+    minmax(300px, 0.88fr);
+
+  min-height: 315px;
+
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 30px;
-  background:
-    radial-gradient(circle at 40% 110%, rgba(11, 130, 150, 0.36), transparent 42%),
-    linear-gradient(120deg, #17186f 0%, #151c70 46%, #11275c 100%);
-  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+
   isolation: isolate;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 26px;
+
+  background:
+    radial-gradient(
+      circle at 82% 22%,
+      rgba(201, 160, 99, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 16% 100%,
+      rgba(45, 93, 150, 0.18),
+      transparent 38%
+    ),
+    linear-gradient(
+      120deg,
+      #0c1626 0%,
+      #10213a 48%,
+      #0a1321 100%
+    );
+
+  box-shadow:
+    0 28px 72px
+    rgba(0, 0, 0, 0.32),
+    inset
+    0 1px 0
+    rgba(255, 255, 255, 0.04);
 }
+
 
 .alchy-guide-card::before {
   content: "";
+
   position: absolute;
+
   inset: 0;
+
   z-index: 2;
+
   pointer-events: none;
-  background: linear-gradient(90deg, transparent 54%, rgba(10, 18, 52, 0.22) 65%, transparent 84%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 44%,
+      rgba(255, 255, 255, 0.025) 61%,
+      transparent 80%
+    );
 }
+
+
+/* =========================================================
+   LEFT TEXT CONTENT
+   ========================================================= */
 
 .alchy-guide-copy {
   position: relative;
+
   z-index: 4;
+
   display: flex;
+
   flex-direction: column;
-  justify-content: center;
+
   align-items: flex-start;
-  padding: clamp(2.2rem, 5vw, 5rem);
-  padding-right: clamp(1.5rem, 3vw, 3rem);
+
+  justify-content: center;
+
+  padding:
+    2.45rem
+    2.4rem;
 }
+
 
 .alchy-guide-kicker {
   display: inline-flex;
+
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.85rem;
-  color: rgba(255, 255, 255, 0.64);
-  font-size: 0.76rem;
+
+  gap: 0.55rem;
+
+  margin-bottom: 0.8rem;
+
+  color: #d8b46f;
+
+  font-size: 0.74rem;
+
   font-weight: 700;
+
   letter-spacing: 0.14em;
+
   text-transform: uppercase;
 }
 
+
 .alchy-guide-kicker::before {
   content: "";
+
   width: 28px;
+
   height: 1px;
-  background: #d7aa52;
+
+  background:
+    #d8b46f;
 }
+
 
 .alchy-guide-copy h2 {
   max-width: 560px;
+
   margin: 0;
+
   color: #ffffff;
-  font-family: "Work Sans", sans-serif;
-  font-size: clamp(2.25rem, 4.2vw, 4.1rem);
+
+  font-family:
+    "Work Sans",
+    sans-serif;
+
+  font-size:
+    clamp(
+      2rem,
+      3.2vw,
+      3.2rem
+    );
+
   font-weight: 400;
-  line-height: 1.02;
-  letter-spacing: -0.045em;
+
+  line-height: 1.04;
+
+  letter-spacing: -0.04em;
 }
+
 
 .alchy-guide-copy h2 strong {
   display: block;
+
   margin-top: 0.12em;
+
+  color: #e5bd70;
+
   font-weight: 700;
 }
 
+
 .alchy-guide-copy p {
-  max-width: 520px;
-  margin: 1.5rem 0 1.8rem;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 0.98rem;
+  max-width: 560px;
+
+  margin:
+    1.15rem
+    0
+    1.35rem;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 0.96rem;
+
   line-height: 1.65;
 }
 
+
+/* =========================================================
+   ASK ALCHY BUTTON
+   ========================================================= */
+
 .alchy-guide-button {
   display: inline-flex;
+
   align-items: center;
+
   gap: 0.7rem;
+
   min-height: 48px;
-  padding: 0.45rem 0.48rem 0.45rem 1.15rem;
-  border: 0;
+
+  padding:
+    0.5rem
+    0.55rem
+    0.5rem
+    1.15rem;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
   border-radius: 999px;
-  background: #ffffff;
-  color: #151a67;
-  font-weight: 600;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+
+  background:
+    linear-gradient(
+      135deg,
+      #d6ad63,
+      #efd497
+    );
+
+  color:
+    #101723;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 12px 28px
+    rgba(0, 0, 0, 0.22),
+    inset
+    0 1px 0
+    rgba(255, 255, 255, 0.18);
+
   cursor: pointer;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    filter 0.22s ease;
 }
 
+
 .alchy-guide-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.24);
+  transform:
+    translateY(-2px);
+
+  filter:
+    brightness(1.04);
+
+  box-shadow:
+    0 16px 34px
+    rgba(0, 0, 0, 0.28);
 }
+
 
 .alchy-guide-button-icon {
   display: grid;
+
   place-items: center;
+
   width: 36px;
+
   height: 36px;
+
   border-radius: 50%;
-  background: #163a9d;
-  color: #ffffff;
+
+  background:
+    #0e1b2f;
+
+  color:
+    #ffffff;
 }
+
+
+/* =========================================================
+   RIGHT SIDE — ALCHY IMAGE
+   ========================================================= */
 
 .alchy-guide-visual {
   position: relative;
+
   z-index: 1;
-  min-height: 360px;
+
+  min-height: 315px;
+
   overflow: hidden;
-  background: #cf0808;
+
+  background:
+    radial-gradient(
+      circle at 54% 44%,
+      rgba(59, 105, 161, 0.18),
+      transparent 34%
+    ),
+    linear-gradient(
+      145deg,
+      #14233a 0%,
+      #0c1727 60%,
+      #08111e 100%
+    );
 }
+
 
 .alchy-guide-visual::before {
   content: "";
+
   position: absolute;
-  inset: 0 auto 0 0;
+
+  inset: 0;
+
   z-index: 2;
-  width: 34%;
+
   pointer-events: none;
-  background: linear-gradient(90deg, #16206d 0%, rgba(22, 32, 109, 0.62) 35%, transparent 100%);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12, 22, 38, 0.78) 0%,
+      rgba(12, 22, 38, 0.26) 20%,
+      transparent 46%
+    );
 }
+
+
+.alchy-guide-visual::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -125px;
+
+  z-index: 0;
+
+  width: 340px;
+
+  height: 340px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    rgba(201, 160, 99, 0.11);
+
+  filter:
+    blur(48px);
+
+  pointer-events: none;
+}
+
+
+/*
+   Bigger transparent mascot.
+
+   Because the image is positioned lower,
+   the bottom of the legs is cropped.
+
+   This creates the body / knees-up appearance
+   you asked for.
+*/
 
 .alchy-guide-visual img {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -95px;
+
+  z-index: 1;
+
   display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 360px;
-  object-fit: cover;
-  object-position: center 17%;
+
+  width: auto;
+
+  height: 430px;
+
+  max-width: none;
+
+  transform:
+    translateX(-50%);
+
+  object-fit: contain;
+
+  object-position:
+    center bottom;
+
+  filter:
+    drop-shadow(
+      0 22px 26px
+      rgba(0, 0, 0, 0.32)
+    );
 }
 
+
 /* =========================================================
-   ALCHY — PREMIUM FLOATING WHATSAPP ASSISTANT
+   FLOATING ALCHY / WHATSAPP
    ========================================================= */
 
 .tca-assist-widget {
   position: fixed;
-  right: 22px;
-  bottom: 20px;
+
+  right: 20px;
+
+  bottom: 18px;
+
   z-index: 10050;
-  font-family: "Work Sans", sans-serif;
+
+  overflow: visible;
+
+  font-family:
+    "Work Sans",
+    sans-serif;
 }
+
 
 .tca-assist-launcher {
   position: relative;
-  display: grid;
-  place-items: center;
-  width: 72px;
-  height: 72px;
+
+  width: 74px;
+
+  height: 74px;
+
   padding: 0;
+
+  overflow: visible;
+
   border: 0;
+
   border-radius: 50%;
-  background: linear-gradient(145deg, #25d366, #0b9e52);
-  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.34), 0 0 0 1px rgba(255, 255, 255, 0.20) inset;
+
+  background:
+    transparent;
+
+  box-shadow:
+    none;
+
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+
+  -webkit-tap-highlight-color:
+    transparent;
 }
 
-.tca-assist-launcher:hover {
-  transform: translateY(-3px) scale(1.035);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.4);
-}
+
+/* small premium circle behind mascot */
 
 .tca-assist-launcher::before {
   content: "";
+
   position: absolute;
-  inset: -5px;
-  border: 1px solid rgba(37, 211, 102, 0.48);
+
+  left: 50%;
+
+  bottom: 2px;
+
+  z-index: 1;
+
+  width: 60px;
+
+  height: 60px;
+
+  transform:
+    translateX(-50%);
+
+  border:
+    1px solid
+    rgba(218, 179, 107, 0.36);
+
   border-radius: 50%;
-  animation: tca-assist-pulse 2.6s ease-out infinite;
+
+  background:
+    radial-gradient(
+      circle at 34% 25%,
+      #2a4263 0%,
+      #162a43 48%,
+      #0b1625 100%
+    );
+
+  box-shadow:
+    0 12px 26px
+    rgba(0, 0, 0, 0.34),
+    inset
+    0 1px 0
+    rgba(255, 255, 255, 0.08);
+
   pointer-events: none;
 }
 
-.tca-assist-launcher-avatar {
-  width: 62px;
-  height: 62px;
-  overflow: hidden;
-  border: 3px solid #ffffff;
+
+/* subtle pulse */
+
+.tca-assist-launcher::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -1px;
+
+  z-index: 0;
+
+  width: 66px;
+
+  height: 66px;
+
+  transform:
+    translateX(-50%);
+
+  border:
+    1px solid
+    rgba(37, 211, 102, 0.24);
+
   border-radius: 50%;
-  background: #d90808;
+
+  animation:
+    tca-assist-pulse
+    2.8s
+    ease-out
+    infinite;
+
+  pointer-events: none;
 }
 
-.tca-assist-launcher-avatar img,
-.tca-assist-header-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 21%;
-  transform: scale(1.13);
+
+/* mascot holder */
+
+.tca-assist-launcher-avatar {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 1px;
+
+  z-index: 3;
+
+  width: 84px;
+
+  height: 102px;
+
+  transform:
+    translateX(-50%);
+
+  overflow: visible;
+
+  border: 0;
+
+  border-radius: 0;
+
+  background:
+    transparent;
+
+  box-shadow:
+    none;
+
+  pointer-events: none;
+
+  transition:
+    transform 0.22s ease;
 }
+
+
+/* transparent PNG mascot */
+
+.tca-assist-launcher-avatar img {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -14px;
+
+  display: block;
+
+  width: auto;
+
+  height: 112px;
+
+  max-width: none;
+
+  transform:
+    translateX(-50%);
+
+  object-fit: contain;
+
+  object-position:
+    center bottom;
+
+  border-radius: 0;
+
+  background:
+    transparent;
+
+  filter:
+    drop-shadow(
+      0 9px 12px
+      rgba(0, 0, 0, 0.28)
+    );
+}
+
+
+.tca-assist-launcher:hover
+.tca-assist-launcher-avatar {
+  transform:
+    translateX(-50%)
+    translateY(-3px)
+    scale(1.025);
+}
+
+
+/* WhatsApp badge */
 
 .tca-assist-wa-badge {
   position: absolute;
-  right: -2px;
-  bottom: -1px;
+
+  right: -1px;
+
+  bottom: 1px;
+
+  z-index: 6;
+
   display: grid;
+
   place-items: center;
-  width: 26px;
-  height: 26px;
-  border: 3px solid #ffffff;
+
+  width: 24px;
+
+  height: 24px;
+
+  border: 0;
+
   border-radius: 50%;
-  background: #25d366;
-  color: #ffffff;
-  font-size: 0.78rem;
+
+  background:
+    #25d366;
+
+  color:
+    #ffffff;
+
+  font-size: 0.76rem;
+
+  box-shadow:
+    0 5px 12px
+    rgba(0, 0, 0, 0.24),
+    0 0 0 2px
+    #ffffff;
 }
 
+
 @keyframes tca-assist-pulse {
-  0% { opacity: 0.7; transform: scale(0.96); }
-  72%, 100% { opacity: 0; transform: scale(1.18); }
+
+  0% {
+    opacity: 0.62;
+
+    transform:
+      translateX(-50%)
+      scale(0.94);
+  }
+
+  72%,
+  100% {
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      scale(1.16);
+  }
+
 }
+
+
+/* =========================================================
+   GREETING BUBBLE
+   ========================================================= */
 
 .tca-assist-teaser {
   position: absolute;
-  right: 86px;
-  bottom: 4px;
+
+  right: 84px;
+
+  bottom: 3px;
+
   width: 278px;
+
   opacity: 0;
+
   visibility: hidden;
-  transform: translateX(14px) scale(0.98);
-  transform-origin: bottom right;
-  transition: opacity 0.28s ease, visibility 0.28s ease, transform 0.28s ease;
+
+  transform:
+    translateX(12px)
+    scale(0.98);
+
+  transform-origin:
+    bottom right;
+
+  transition:
+    opacity 0.26s ease,
+    visibility 0.26s ease,
+    transform 0.26s ease;
 }
+
 
 .tca-assist-teaser.is-visible {
   opacity: 1;
+
   visibility: visible;
-  transform: translateX(0) scale(1);
+
+  transform:
+    translateX(0)
+    scale(1);
 }
+
 
 .tca-assist-teaser-card {
   position: relative;
+
   width: 100%;
+
   min-height: 66px;
-  padding: 13px 38px 13px 18px;
-  border: 0;
-  border-radius: 22px;
-  background: #ffffff;
-  color: #1c1c1c;
+
+  padding:
+    13px
+    38px
+    13px
+    17px;
+
+  border:
+    1px solid
+    rgba(12, 23, 38, 0.08);
+
+  border-radius: 18px;
+
+  background:
+    #ffffff;
+
+  color:
+    #1f2630;
+
   text-align: left;
-  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.22);
+
+  box-shadow:
+    0 16px 42px
+    rgba(0, 0, 0, 0.20);
+
   cursor: pointer;
 }
+
 
 .tca-assist-teaser-card::after {
   content: "";
+
   position: absolute;
+
   right: -7px;
-  bottom: 20px;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  transform: rotate(45deg);
+
+  bottom: 18px;
+
+  width: 15px;
+
+  height: 15px;
+
+  background:
+    #ffffff;
+
+  transform:
+    rotate(45deg);
 }
+
 
 .tca-assist-teaser-line {
   display: flex;
-  align-items: flex-start;
+
+  align-items:
+    flex-start;
+
   gap: 9px;
 }
+
 
 .tca-assist-online-dot {
   width: 8px;
+
   height: 8px;
-  flex: 0 0 8px;
+
+  flex:
+    0 0 8px;
+
   margin-top: 5px;
+
   border-radius: 50%;
-  background: #25d366;
+
+  background:
+    #25d366;
 }
+
 
 .tca-assist-teaser-copy {
   display: block;
-  color: #232323;
-  font-size: 0.83rem;
+
+  color:
+    #202833;
+
+  font-size: 0.82rem;
+
   font-weight: 600;
-  line-height: 1.35;
+
+  line-height: 1.38;
 }
 
+
 .tca-assist-teaser-copy strong {
+  color:
+    #0e1b2f;
+
   font-weight: 800;
 }
 
+
 .tca-assist-teaser-close {
   position: absolute;
+
   top: 8px;
-  right: 9px;
+
+  right: 8px;
+
   z-index: 3;
+
   display: grid;
+
   place-items: center;
-  width: 26px;
-  height: 26px;
+
+  width: 25px;
+
+  height: 25px;
+
   padding: 0;
+
   border: 0;
+
   border-radius: 50%;
-  background: #f1f1f1;
-  color: #686868;
+
+  background:
+    #f0f2f4;
+
+  color:
+    #626b75;
+
   cursor: pointer;
 }
+
+
+/* =========================================================
+   ASSISTANT PANEL
+   ========================================================= */
 
 .tca-assist-panel {
   position: absolute;
+
   right: 0;
+
   bottom: 88px;
+
   width: 350px;
+
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  border-radius: 23px;
-  background: #efeae2;
-  box-shadow: 0 28px 76px rgba(0, 0, 0, 0.38);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 22px;
+
+  background:
+    #f2eee7;
+
+  box-shadow:
+    0 28px 76px
+    rgba(0, 0, 0, 0.38);
+
   opacity: 0;
+
   visibility: hidden;
-  transform: translateY(18px) scale(0.965);
-  transform-origin: bottom right;
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(.2,.8,.2,1);
+
+  transform:
+    translateY(16px)
+    scale(0.97);
+
+  transform-origin:
+    bottom right;
+
+  transition:
+    opacity 0.28s ease,
+    visibility 0.28s ease,
+    transform 0.28s
+      cubic-bezier(
+        .2,
+        .8,
+        .2,
+        1
+      );
 }
+
 
 .tca-assist-panel.is-open {
   opacity: 1;
+
   visibility: visible;
-  transform: translateY(0) scale(1);
+
+  transform:
+    translateY(0)
+    scale(1);
 }
+
+
+/* panel header */
 
 .tca-assist-header {
   position: relative;
+
   display: flex;
+
   align-items: center;
+
   gap: 12px;
-  min-height: 84px;
-  padding: 14px 48px 14px 15px;
-  background: linear-gradient(135deg, #0b6f60, #087b65);
-  color: #ffffff;
+
+  min-height: 82px;
+
+  padding:
+    13px
+    48px
+    13px
+    14px;
+
+  background:
+    radial-gradient(
+      circle at 12% 20%,
+      rgba(201, 160, 99, 0.15),
+      transparent 24%
+    ),
+    linear-gradient(
+      135deg,
+      #10213a,
+      #0b1728
+    );
+
+  color:
+    #ffffff;
 }
 
+
 .tca-assist-header-avatar {
-  width: 54px;
-  height: 54px;
-  flex: 0 0 54px;
+  position: relative;
+
+  width: 52px;
+
+  height: 52px;
+
+  flex:
+    0 0 52px;
+
   overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.88);
+
+  border:
+    1px solid
+    rgba(218, 179, 107, 0.38);
+
   border-radius: 50%;
-  background: #d90808;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.18);
+
+  background:
+    #13263e;
+
+  box-shadow:
+    0 5px 16px
+    rgba(0, 0, 0, 0.20);
 }
+
+
+.tca-assist-header-avatar img {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -7px;
+
+  width: auto;
+
+  height: 65px;
+
+  max-width: none;
+
+  transform:
+    translateX(-50%);
+
+  object-fit: contain;
+
+  object-position:
+    center bottom;
+}
+
 
 .tca-assist-header-copy strong {
   display: block;
+
   margin-bottom: 2px;
-  color: #ffffff;
+
+  color:
+    #ffffff;
+
   font-size: 1rem;
+
   line-height: 1.2;
 }
 
+
 .tca-assist-header-copy span {
   display: block;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.73rem;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 0.72rem;
+
   line-height: 1.35;
 }
 
+
 .tca-assist-panel-close {
   position: absolute;
+
   top: 14px;
+
   right: 13px;
+
   display: grid;
+
   place-items: center;
+
   width: 30px;
+
   height: 30px;
+
   padding: 0;
+
   border: 0;
+
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.10);
+
+  color:
+    #ffffff;
+
   cursor: pointer;
 }
 
+
+/* =========================================================
+   CHAT BODY
+   ========================================================= */
+
 .tca-assist-body {
-  min-height: 168px;
+  min-height: 160px;
+
   padding: 16px;
+
   background:
-    linear-gradient(rgba(239, 234, 226, 0.95), rgba(239, 234, 226, 0.95)),
-    radial-gradient(circle at 9px 9px, rgba(65, 55, 45, 0.07) 1px, transparent 1.25px);
-  background-size: auto, 18px 18px;
+    linear-gradient(
+      rgba(242, 238, 231, 0.96),
+      rgba(242, 238, 231, 0.96)
+    ),
+    radial-gradient(
+      circle at 9px 9px,
+      rgba(65, 55, 45, 0.06) 1px,
+      transparent 1.25px
+    );
+
+  background-size:
+    auto,
+    18px 18px;
 }
+
 
 .tca-assist-message {
   position: relative;
+
   max-width: 88%;
-  padding: 12px 14px;
-  border-radius: 7px 16px 16px 16px;
-  background: #ffffff;
-  color: #222222;
-  box-shadow: 0 5px 17px rgba(0, 0, 0, 0.09);
+
+  padding:
+    12px
+    14px;
+
+  border-radius:
+    7px
+    16px
+    16px
+    16px;
+
+  background:
+    #ffffff;
+
+  color:
+    #222222;
+
+  box-shadow:
+    0 5px 17px
+    rgba(0, 0, 0, 0.08);
 }
+
 
 .tca-assist-message::before {
   content: "";
+
   position: absolute;
+
   top: 0;
+
   left: -7px;
+
   width: 14px;
+
   height: 14px;
-  background: #ffffff;
-  clip-path: polygon(100% 0, 100% 100%, 0 0);
+
+  background:
+    #ffffff;
+
+  clip-path:
+    polygon(
+      100% 0,
+      100% 100%,
+      0 0
+    );
 }
+
 
 .tca-assist-message-name {
   display: block;
+
   margin-bottom: 7px;
-  color: #087765;
+
+  color:
+    #b48236;
+
   font-size: 0.76rem;
-  font-weight: 700;
+
+  font-weight: 800;
 }
 
+
 .tca-assist-message p {
-  margin: 0 0 5px;
-  color: #262626;
+  margin:
+    0
+    0
+    5px;
+
+  color:
+    #272727;
+
   font-size: 0.9rem;
+
   line-height: 1.45;
 }
 
-.tca-assist-message p:last-child { margin-bottom: 0; }
+
+.tca-assist-message p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON IN PANEL
+   ========================================================= */
 
 .tca-assist-footer {
-  padding: 14px 15px 13px;
-  background: #ffffff;
+  padding:
+    14px
+    15px
+    13px;
+
+  background:
+    #ffffff;
+
   text-align: center;
 }
 
+
 .tca-assist-whatsapp {
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 9px;
+
   width: 100%;
-  min-height: 52px;
-  padding: 10px 14px;
+
+  min-height: 50px;
+
+  padding:
+    10px
+    14px;
+
   border-radius: 13px;
-  background: #25d366;
-  color: #ffffff;
+
+  background:
+    #25d366;
+
+  color:
+    #ffffff;
+
   text-decoration: none;
+
   font-size: 0.9rem;
+
   font-weight: 700;
+
   line-height: 1.25;
-  box-shadow: 0 9px 22px rgba(37, 211, 102, 0.24);
-  transition: transform 0.2s ease, background 0.2s ease;
+
+  box-shadow:
+    0 9px 22px
+    rgba(37, 211, 102, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
+
 .tca-assist-whatsapp:hover {
-  transform: translateY(-2px);
-  background: #1fc45c;
-  color: #ffffff;
+  transform:
+    translateY(-2px);
+
+  background:
+    #1fc45c;
+
+  color:
+    #ffffff;
 }
+
 
 .tca-assist-footer small {
   display: block;
+
   margin-top: 7px;
-  color: #9a9a9a;
+
+  color:
+    #8c8c8c;
+
   font-size: 0.63rem;
 }
 
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
 @media (max-width: 991.98px) {
+
   .alchy-guide-card {
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
-    min-height: 330px;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(270px, 0.82fr);
+
+    min-height: 300px;
   }
+
 
   .alchy-guide-copy {
-    padding: 2.4rem 2rem;
+    padding:
+      2.1rem
+      1.8rem;
   }
 
-  .alchy-guide-visual,
-  .alchy-guide-visual img {
-    min-height: 330px;
+
+  .alchy-guide-visual {
+    min-height: 300px;
   }
+
+
+  .alchy-guide-visual img {
+    height: 390px;
+
+    bottom: -88px;
+  }
+
 }
 
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 767.98px) {
+
   .alchy-guide-card {
     grid-template-columns: 1fr;
-    border-radius: 24px;
+
+    border-radius: 22px;
   }
 
-  .alchy-guide-card::before { display: none; }
+
+  .alchy-guide-card::before {
+    display: none;
+  }
+
 
   .alchy-guide-copy {
-    padding: 2.1rem 1.35rem 2rem;
+    padding:
+      1.8rem
+      1.3rem
+      1.4rem;
+  }
+
+
+  .alchy-guide-copy h2 {
+    font-size:
+      clamp(
+        1.9rem,
+        9vw,
+        2.7rem
+      );
+  }
+
+
+  .alchy-guide-copy p {
+    margin:
+      1rem
+      0
+      1.2rem;
+  }
+
+
+  .alchy-guide-visual {
+    min-height: 255px;
+  }
+
+
+  .alchy-guide-visual::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(12, 22, 38, 0.68) 0%,
+        rgba(12, 22, 38, 0.12) 24%,
+        transparent 48%
+      );
+  }
+
+
+  .alchy-guide-visual img {
+    height: 335px;
+
+    bottom: -76px;
+  }
+
+}
+
+
+/* =========================================================
+   ASK ALCHY — FINAL HAIR FIX + PROPER ALIGNMENT
+   ========================================================= */
+
+.alchy-guide-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.alchy-guide-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  min-height: 290px;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+/* LEFT SIDE */
+.alchy-guide-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.9rem 2.4rem;
+}
+
+.alchy-guide-kicker {
+  margin-bottom: 0.55rem;
+  font-size: 0.68rem;
+}
+
+.alchy-guide-copy h2 {
+  max-width: 520px;
+  font-size: clamp(1.8rem, 2.5vw, 2.55rem);
+  line-height: 1.05;
+}
+
+.alchy-guide-copy p {
+  max-width: 520px;
+  margin: 0.8rem 0 1rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+/* BUTTON */
+.alchy-guide-button {
+  min-height: 44px;
+  padding: 0.42rem 0.48rem 0.42rem 1rem;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+}
+
+.alchy-guide-button-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* RIGHT SIDE */
+.alchy-guide-visual {
+  position: relative;
+  min-height: 290px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.alchy-guide-visual img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: auto;
+  height: 270px;
+  max-width: none;
+  transform: translateX(-50%);
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+/* TABLET */
+@media (max-width: 991.98px) {
+  .alchy-guide-card {
+    grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.92fr);
+    min-height: 260px;
+  }
+
+  .alchy-guide-copy {
+    padding: 1.6rem 1.7rem;
   }
 
   .alchy-guide-copy h2 {
-    font-size: clamp(2.3rem, 12vw, 3.5rem);
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
   }
 
   .alchy-guide-copy p {
-    margin: 1.2rem 0 1.5rem;
+    font-size: 0.84rem;
+    margin: 0.7rem 0 0.95rem;
   }
 
   .alchy-guide-visual {
-    min-height: 290px;
-  }
-
-  .alchy-guide-visual::before {
-    inset: 0 0 auto 0;
-    width: 100%;
-    height: 24%;
-    background: linear-gradient(180deg, #16206d 0%, rgba(22, 32, 109, 0.35) 45%, transparent 100%);
+    min-height: 260px;
   }
 
   .alchy-guide-visual img {
-    min-height: 290px;
-    object-position: center 16%;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .tca-assist-widget {
-    right: 13px;
-    bottom: 13px;
-  }
-
-  .tca-assist-launcher {
-    width: 64px;
-    height: 64px;
-  }
-
-  .tca-assist-launcher-avatar {
-    width: 55px;
-    height: 55px;
-  }
-
-  .tca-assist-teaser {
-    right: 75px;
+    height: 235px;
     bottom: 0;
-    width: min(244px, calc(100vw - 102px));
-  }
-
-  .tca-assist-teaser-card {
-    min-height: 61px;
-    padding: 11px 34px 11px 14px;
-    border-radius: 18px;
-  }
-
-  .tca-assist-teaser-copy {
-    font-size: 0.76rem;
-  }
-
-  .tca-assist-panel {
-    position: fixed;
-    right: 12px;
-    bottom: 88px;
-    width: calc(100vw - 24px);
-    max-width: 350px;
-    border-radius: 20px;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .tca-assist-launcher,
-  .tca-assist-launcher::before,
-  .tca-assist-teaser,
-  .tca-assist-panel,
-  .tca-assist-whatsapp,
-  .alchy-guide-button {
-    animation: none !important;
-    transition: none !important;
+/* MOBILE */
+@media (max-width: 767.98px) {
+  .alchy-guide-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .alchy-guide-copy {
+    padding: 1.6rem 1.3rem 1.25rem;
+  }
+
+  .alchy-guide-copy h2 {
+    font-size: clamp(1.75rem, 8vw, 2.35rem);
+  }
+
+  .alchy-guide-copy p {
+    margin: 0.75rem 0 1rem;
+    font-size: 0.84rem;
+  }
+
+  .alchy-guide-visual {
+    min-height: 245px;
+  }
+
+  .alchy-guide-visual img {
+    height: 220px;
+    bottom: 0;
   }
 }
