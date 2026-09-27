@@ -5568,3 +5568,478 @@ button.active {
     bottom: 0;
   }
 }
+/* =========================================================
+   GALLERY — FINAL COMPACT PROFESSIONAL SIZE
+   Paste at VERY BOTTOM of style.css
+   ========================================================= */
+
+.showroom-carousel {
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* DESKTOP */
+.gallery-slide {
+  height: 430px !important;
+}
+
+
+/* Keep photos proportional and professional */
+.showroom-slide-image {
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+
+/* TABLET */
+@media (max-width: 991.98px) {
+
+  .gallery-slide {
+    height: 370px !important;
+  }
+
+}
+
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+
+  .gallery-slide {
+    height: 310px !important;
+  }
+
+  .showroom-caption {
+    left: 20px;
+    right: 20px;
+    bottom: 48px;
+  }
+
+  .showroom-caption h3 {
+    font-size: 1.65rem;
+  }
+
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 575.98px) {
+
+  .gallery-slide {
+    height: 270px !important;
+  }
+
+  .showroom-caption {
+    left: 18px;
+    right: 18px;
+    bottom: 42px;
+  }
+
+  .showroom-caption h3 {
+    font-size: 1.4rem;
+  }
+
+  .showroom-caption p {
+    display: none;
+  }
+
+}
+/* =========================================================
+   GALLERY — FINAL SMALLER / FULL IMAGE FIX
+   KEEP THIS AT THE VERY BOTTOM OF style.css
+   ========================================================= */
+
+
+/* Smaller overall gallery */
+.showroom-carousel {
+  width: 100%;
+  max-width: 900px !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  border-radius: 18px;
+}
+
+
+/* Smaller desktop height */
+.gallery-slide {
+  height: 340px !important;
+
+  background: #0b0b0b !important;
+}
+
+
+/* SHOW THE FULL PHOTO — DON'T CROP IT */
+.showroom-slide-image {
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+}
+
+
+/* Disable the old automatic zoom */
+.showroom-carousel
+.carousel-item.active
+.showroom-slide-image {
+  transform: none !important;
+}
+
+
+/* Slightly smaller caption */
+.showroom-caption {
+  left: 4% !important;
+  bottom: 42px !important;
+
+  max-width: 500px !important;
+}
+
+
+.showroom-caption h3 {
+  font-size: clamp(
+    1.6rem,
+    2.7vw,
+    2.4rem
+  ) !important;
+
+  line-height: 1.08;
+}
+
+
+.showroom-caption p {
+  max-width: 460px;
+
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+
+/* Smaller navigation buttons */
+.gallery-control {
+  width: 42px !important;
+  height: 42px !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+  .showroom-carousel {
+    max-width: 820px !important;
+  }
+
+  .gallery-slide {
+    height: 320px !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+  .showroom-carousel {
+    width: calc(100% - 10px);
+    max-width: 100% !important;
+  }
+
+  .gallery-slide {
+    height: 270px !important;
+  }
+
+  .showroom-caption {
+    left: 18px !important;
+    right: 18px !important;
+    bottom: 38px !important;
+  }
+
+  .showroom-caption h3 {
+    font-size: 1.55rem !important;
+  }
+
+  .showroom-caption p {
+    font-size: 0.8rem;
+  }
+
+  .gallery-control {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+  .gallery-slide {
+    height: 230px !important;
+  }
+
+  .showroom-caption {
+    bottom: 34px !important;
+  }
+
+  .showroom-caption-kicker {
+    font-size: 0.58rem;
+  }
+
+  .showroom-caption h3 {
+    font-size: 1.3rem !important;
+  }
+
+  .showroom-caption p {
+    display: none;
+  }
+
+}
+/* =========================================================
+   GALLERY — ALIGN CARD WITH WEBSITE CONTAINER
+   Paste at VERY BOTTOM of style.css
+   ========================================================= */
+
+.showroom-carousel {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  border-radius: 22px !important;
+}
+
+
+/* Desktop */
+.gallery-slide {
+  height: 400px !important;
+}
+
+
+/* Tablet */
+@media (max-width: 991.98px) {
+
+  .showroom-carousel {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .gallery-slide {
+    height: 350px !important;
+  }
+
+}
+
+
+/* Mobile */
+@media (max-width: 767.98px) {
+
+  .showroom-carousel {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .gallery-slide {
+    height: 300px !important;
+  }
+
+}
+
+
+/* Small mobile */
+@media (max-width: 575.98px) {
+
+  .gallery-slide {
+    height: 260px !important;
+  }
+
+}
+/* =========================================================
+   NAVBAR LOGO — SAHEED SONS / SINCE 1986
+   Logo stays in its existing position
+   ========================================================= */
+
+.navbar-brand-heritage {
+  display: inline-flex !important;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center;
+
+  gap: 0;
+
+  margin-right: 1.4rem;
+
+  text-decoration: none;
+}
+
+
+/* Keep existing logo dimensions */
+.navbar-brand-heritage .brand-mark {
+  flex-shrink: 0;
+}
+
+
+/* Text directly below logo */
+.brand-heritage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 3px;
+
+  line-height: 1;
+  text-align: center;
+}
+
+
+/* SAHEED SONS */
+.brand-heritage-name {
+  font-family:
+    "Fraunces",
+    Georgia,
+    serif;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff0b8 0%,
+      #f3d483 20%,
+      #c99843 48%,
+      #edc66a 72%,
+      #9d6b25 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  color: #d2a34d;
+
+  text-shadow:
+    0 1px 0 rgba(255, 236, 170, 0.18),
+    0 2px 2px rgba(72, 42, 6, 0.45),
+    0 4px 8px rgba(0, 0, 0, 0.34);
+
+  white-space: nowrap;
+}
+
+
+/* SINCE 1986 */
+.brand-heritage-since {
+  margin-top: 4px;
+
+  font-family:
+    "Work Sans",
+    sans-serif;
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.28em;
+
+  color: rgba(227, 200, 150, 0.86);
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Subtle hover only */
+.navbar-brand-heritage:hover
+.brand-heritage-name {
+  filter: brightness(1.12);
+}
+
+
+/* =========================================================
+   NAVIGATION — KEEP CENTRED
+   ========================================================= */
+
+@media (min-width: 992px) {
+
+  .navbar-alchemy .container {
+    position: relative;
+  }
+
+  .navbar-alchemy #mainNav {
+    justify-content: center;
+  }
+
+  .navbar-alchemy #mainNav .navbar-nav {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+  .brand-heritage-name {
+    font-size: 0.72rem;
+  }
+
+  .brand-heritage-since {
+    font-size: 0.43rem;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+  .navbar-brand-heritage {
+    margin-right: 0.5rem;
+  }
+
+  .brand-heritage {
+    margin-top: 2px;
+  }
+
+  .brand-heritage-name {
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+  }
+
+  .brand-heritage-since {
+    margin-top: 3px;
+
+    font-size: 0.38rem;
+    letter-spacing: 0.20em;
+  }
+
+}
