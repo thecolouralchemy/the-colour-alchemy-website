@@ -6057,3 +6057,818 @@ button.active {
   }
 
 }
+
+/* =========================================================
+   FINAL SITE ADDITIONS — INSPIRATION + GALLERY LIGHTBOX
+   ========================================================= */
+
+
+/* =========================================================
+   NAVIGATION — EXTRA INSPIRATION TAB
+   Keep the seven-link desktop navigation comfortable at the
+   lower end of the Bootstrap lg breakpoint.
+   ========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  .navbar-brand-heritage {
+    margin-right: 0.65rem;
+  }
+
+
+  .navbar-alchemy
+  .navbar-nav
+  .nav-link {
+    padding-left: 0.46rem !important;
+    padding-right: 0.46rem !important;
+
+    font-size: 0.82rem;
+  }
+
+
+  .btn-quote-nav,
+  .btn-whatsapp-nav {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+
+    font-size: 0.7rem;
+  }
+
+}
+
+
+/* =========================================================
+   GALLERY — OPEN-LARGER CONTROL
+   ========================================================= */
+
+.gallery-slide {
+  isolation: isolate;
+}
+
+
+.gallery-lightbox-trigger {
+  position: absolute;
+
+  z-index: 3;
+
+  top: 16px;
+  right: 16px;
+
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 0;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.24);
+
+  border-radius: 50%;
+
+  background:
+    rgba(8, 8, 8, 0.72);
+
+  color: #ffffff;
+
+  cursor: zoom-in;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 22px
+    rgba(0, 0, 0, 0.26);
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.gallery-lightbox-trigger:hover,
+.gallery-lightbox-trigger:focus-visible {
+  background:
+    var(--color-gold);
+
+  border-color:
+    var(--color-gold);
+
+  color:
+    #0a0a0a;
+
+  transform:
+    translateY(-1px);
+}
+
+
+.gallery-zoom-badge {
+  display: grid;
+
+  place-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  line-height: 1;
+}
+
+
+.showroom-slide-image {
+  cursor: zoom-in;
+}
+
+
+/* Portrait photographs retain their full composition. */
+.gallery-slide-portrait
+.showroom-slide-image {
+  object-fit: contain !important;
+
+  object-position:
+    center center !important;
+}
+
+
+/* =========================================================
+   GALLERY LIGHTBOX MODAL
+   ========================================================= */
+
+.gallery-lightbox-modal
+.modal-dialog {
+  max-width:
+    min(
+      1180px,
+      calc(100vw - 2rem)
+    );
+}
+
+
+.gallery-lightbox-modal
+.modal-content {
+  position: relative;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-radius: 18px;
+
+  background:
+    #080808;
+
+  box-shadow:
+    0 32px 90px
+    rgba(0, 0, 0, 0.58);
+}
+
+
+.gallery-lightbox-close {
+  position: absolute;
+
+  z-index: 4;
+
+  top: 14px;
+  right: 14px;
+
+  padding: 0.72rem;
+
+  border-radius: 50%;
+
+  background-color:
+    rgba(0, 0, 0, 0.55);
+
+  opacity: 0.92;
+}
+
+
+.gallery-lightbox-stage {
+  display: grid;
+
+  place-items: center;
+
+  min-height: 320px;
+  max-height: 78vh;
+
+  padding: 1rem;
+
+  background:
+    #050505;
+}
+
+
+.gallery-lightbox-stage
+img {
+  display: block;
+
+  max-width: 100%;
+  max-height: 74vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+.gallery-lightbox-copy {
+  padding:
+    1rem
+    1.25rem
+    1.2rem;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+.gallery-lightbox-copy
+h2 {
+  color:
+    var(--color-text);
+}
+
+
+.gallery-lightbox-copy
+p {
+  color:
+    var(--color-text-muted);
+
+  font-size: 0.86rem;
+}
+
+
+@media (max-width: 575.98px) {
+
+  .gallery-lightbox-trigger {
+    top: 12px;
+    right: 12px;
+
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .gallery-lightbox-modal
+  .modal-dialog {
+    max-width:
+      calc(100vw - 1rem);
+
+    margin:
+      0.5rem auto;
+  }
+
+
+  .gallery-lightbox-modal
+  .modal-content {
+    border-radius: 14px;
+  }
+
+
+  .gallery-lightbox-stage {
+    max-height: 74vh;
+
+    padding: 0.55rem;
+  }
+
+
+  .gallery-lightbox-stage
+  img {
+    max-height: 70vh;
+  }
+
+}
+
+
+/* =========================================================
+   INSPIRATION PAGE
+   Original The Colour Alchemy colour-direction experience.
+   ========================================================= */
+
+.inspiration-page-header {
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+.inspiration-page-header::after {
+  content: "";
+
+  position: absolute;
+
+  right: -120px;
+  bottom: -95px;
+
+  width: 360px;
+  height: 150px;
+
+  background:
+    var(--gradient-spectrum);
+
+  opacity: 0.1;
+
+  filter:
+    blur(46px);
+
+  pointer-events: none;
+}
+
+
+.inspiration-intro-section {
+  background:
+    #0a0a0a;
+}
+
+
+.inspiration-principle-card {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 1rem;
+
+  padding: 1.45rem;
+
+  border:
+    1px solid
+    rgba(201, 160, 99, 0.24);
+
+  border-radius: 8px;
+
+  background:
+    #12110f;
+}
+
+
+.inspiration-principle-number,
+.inspiration-step-number {
+  flex:
+    0 0 auto;
+
+  color:
+    var(--color-gold);
+
+  font-family:
+    var(--font-display);
+
+  font-size: 1.5rem;
+
+  line-height: 1;
+}
+
+
+.inspiration-principle-card
+h2 {
+  color:
+    var(--color-text);
+}
+
+
+.inspiration-principle-card
+p {
+  color:
+    var(--color-text-muted);
+
+  font-size: 0.9rem;
+}
+
+
+.inspiration-section-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+
+.inspiration-filter {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+
+  gap: 0.5rem;
+}
+
+
+.inspiration-filter-btn {
+  min-height: 40px;
+
+  padding:
+    0.55rem
+    0.85rem;
+
+  border:
+    1px solid
+    #d7d1c8;
+
+  border-radius: 999px;
+
+  background:
+    #ffffff;
+
+  color:
+    #39352f;
+
+  font-family:
+    var(--font-body);
+
+  font-size: 0.74rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.inspiration-filter-btn:hover {
+  border-color:
+    var(--color-gold);
+
+  transform:
+    translateY(-1px);
+}
+
+
+.inspiration-filter-btn.is-active {
+  border-color:
+    var(--color-text-on-light);
+
+  background:
+    var(--color-text-on-light);
+
+  color:
+    #ffffff;
+}
+
+
+.inspiration-grid
+[data-inspiration-card][hidden] {
+  display: none !important;
+}
+
+
+.inspiration-card {
+  height: 100%;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--color-border-light);
+
+  border-radius: 8px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 18px 40px -34px
+    rgba(0, 0, 0, 0.45);
+
+  transition:
+    border-color 0.25s ease,
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+
+.inspiration-card:hover {
+  border-color:
+    rgba(201, 160, 99, 0.72);
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 24px 48px -34px
+    rgba(0, 0, 0, 0.55);
+}
+
+
+.inspiration-swatches {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      1fr
+    );
+
+  min-height: 148px;
+
+  background:
+    #ece8e0;
+}
+
+
+.inspiration-swatches
+span {
+  display: block;
+
+  min-width: 0;
+
+  background:
+    var(--swatch);
+}
+
+
+.inspiration-card-body {
+  padding:
+    1.35rem;
+}
+
+
+.inspiration-card-kicker {
+  display: block;
+
+  margin-bottom: 0.48rem;
+
+  color:
+    #8b6b37;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+}
+
+
+.inspiration-card
+h3 {
+  margin-bottom: 0.7rem;
+
+  color:
+    var(--color-text-on-light);
+
+  font-size: 1.28rem;
+}
+
+
+.inspiration-card
+p {
+  margin-bottom: 1rem;
+
+  color:
+    var(--color-text-on-light-muted);
+
+  font-size: 0.88rem;
+}
+
+
+.inspiration-card-tip {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 0.5rem;
+
+  color:
+    #5e574d;
+
+  font-size: 0.76rem;
+
+  font-weight: 600;
+}
+
+
+.inspiration-card-tip
+i {
+  margin-top: 0.06rem;
+
+  color:
+    #9b733a;
+}
+
+
+.inspiration-screen-note {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 0.65rem;
+
+  max-width: 760px;
+
+  margin:
+    2rem auto
+    0;
+
+  padding:
+    0.85rem
+    1rem;
+
+  border:
+    1px solid
+    #ddd7cd;
+
+  border-radius: 6px;
+
+  background:
+    #f7f5f1;
+
+  color:
+    var(--color-text-on-light-muted);
+}
+
+
+.inspiration-screen-note
+i {
+  margin-top: 0.2rem;
+
+  color:
+    #8f6a31;
+}
+
+
+.inspiration-screen-note
+p {
+  color:
+    var(--color-text-on-light-muted);
+
+  font-size: 0.82rem;
+}
+
+
+.inspiration-step {
+  height: 100%;
+
+  padding:
+    1.65rem;
+
+  border:
+    var(--border-hair);
+
+  border-radius: 7px;
+
+  background:
+    var(--color-bg-elevated);
+}
+
+
+.inspiration-step-number {
+  display: block;
+
+  margin-bottom: 1.1rem;
+}
+
+
+.inspiration-step
+h3 {
+  margin-bottom: 0.6rem;
+
+  font-size: 1.15rem;
+}
+
+
+.inspiration-step
+p {
+  font-size: 0.88rem;
+}
+
+
+.inspiration-advice-card {
+  height: 100%;
+
+  padding:
+    1.55rem;
+
+  border:
+    1px solid
+    var(--color-border-light);
+
+  border-radius: 7px;
+
+  background:
+    #ffffff;
+}
+
+
+.inspiration-advice-card
+> i {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  font-size: 1.45rem;
+}
+
+
+.inspiration-advice-card
+h3 {
+  margin-bottom: 0.55rem;
+
+  color:
+    var(--color-text-on-light);
+
+  font-size: 1.12rem;
+}
+
+
+.inspiration-advice-card
+p {
+  color:
+    var(--color-text-on-light-muted);
+
+  font-size: 0.88rem;
+}
+
+
+.inspiration-cta
+.section-kicker {
+  margin-bottom: 0.55rem;
+}
+
+
+@media (max-width: 991.98px) {
+
+  .inspiration-section-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+
+  .inspiration-filter {
+    justify-content: flex-start;
+  }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+  .inspiration-filter {
+    width: 100%;
+  }
+
+
+  .inspiration-filter-btn {
+    flex:
+      1 1
+      calc(50% - 0.5rem);
+
+    justify-content: center;
+  }
+
+
+  .inspiration-swatches {
+    min-height: 120px;
+  }
+
+
+  .inspiration-card-body,
+  .inspiration-step,
+  .inspiration-advice-card {
+    padding: 1.2rem;
+  }
+
+}
+
+
+/* Keep grouped catalogue options legible on dark form controls. */
+.filter-bar
+.form-select
+optgroup {
+  background:
+    #111111;
+
+  color:
+    var(--color-gold-soft);
+}
+
+/* Prevent wide Bootstrap g-5 rows from creating horizontal scroll on phones. */
+@media (max-width: 575.98px) {
+
+  main
+  .row.g-5 {
+    --bs-gutter-x: 1.5rem;
+  }
+
+}
+

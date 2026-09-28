@@ -332,6 +332,128 @@ const PRODUCTS = [
 
 ];
 
+/* =========================================================
+   CATALOGUE TAXONOMY + SEARCH KEYWORDS
+   Keeps the supplied product data intact while presenting a
+   clearer customer-facing catalogue structure.
+   ========================================================= */
+
+const PRODUCT_CATEGORY_MAP = {
+  "Interior Paint": "Interior Paint",
+  "Exterior Paint": "Exterior Paint",
+  "Interior & Exterior Paint": "Interior & Exterior Paint",
+  "Primer & Sealer": "Primers",
+  "Wall Preparation": "Wall Fillers",
+  "Waterproofing": "Waterproofing",
+  "Wood Care": "Wood Finishes",
+  "Wood Coating": "Wood Finishes",
+  "Metal Protection": "Metal Finishes",
+  "Floor Paint": "Floor Paint",
+  "Enamel Paint": "Enamel Paint",
+  "Cleaner": "Surface Preparation",
+  "Adhesive": "Adhesives & Repair",
+  "Paint Accessories": "Paint Accessories",
+  "Paint Tools": "Brushes",
+  "Sinks & Taps": "Beyond Colour"
+};
+
+function getCatalogueCategory(product) {
+  if (
+    product.category === "Sinks & Taps"
+    &&
+    /sink/i.test(product.name)
+  ) {
+    return "Handmade Sinks";
+  }
+
+  if (
+    product.category === "Sinks & Taps"
+    &&
+    /tap/i.test(product.name)
+  ) {
+    return "Stainless-Steel Taps";
+  }
+
+  return PRODUCT_CATEGORY_MAP[product.category] || product.category;
+}
+
+function getCatalogueGroup(product) {
+  const category = getCatalogueCategory(product);
+
+  if (
+    category === "Brushes"
+    ||
+    category === "Paint Accessories"
+  ) {
+    return "accessories";
+  }
+
+  if (
+    category === "Handmade Sinks"
+    ||
+    category === "Stainless-Steel Taps"
+  ) {
+    return "beyond";
+  }
+
+  return "paint";
+}
+
+const PRODUCT_KEYWORD_ALIASES = {
+  "Interior Paint": ["interior", "inside", "wall paint", "rooms"],
+  "Exterior Paint": ["exterior", "outside", "wall paint", "weather"],
+  "Interior & Exterior Paint": ["interior", "exterior", "inside", "outside"],
+  "Primers": ["primer", "undercoat", "sealer", "surface preparation"],
+  "Wall Fillers": ["wall filler", "putty", "surface preparation", "filler"],
+  "Waterproofing": ["waterproof", "damp", "water protection", "crack"],
+  "Wood Finishes": ["wood", "timber", "woodcare", "varnish", "wood finish"],
+  "Metal Finishes": ["metal", "steel", "anti-corrosive", "metal finish"],
+  "Floor Paint": ["floor", "concrete floor", "cement floor", "floor coating"],
+  "Enamel Paint": ["enamel", "gloss", "wood", "metal"],
+  "Surface Preparation": ["cleaner", "preparation", "surface treatment"],
+  "Adhesives & Repair": ["adhesive", "repair", "bonding"],
+  "Brushes": ["brush", "paint brush", "application tool"],
+  "Paint Accessories": ["paint accessory", "thinner", "finishing accessory"],
+  "Handmade Sinks": ["sink", "handmade sink", "kitchen sink", "bathroom sink"],
+  "Stainless-Steel Taps": ["tap", "stainless steel tap", "kitchen tap", "bathroom tap"]
+};
+
+PRODUCTS.forEach((product) => {
+  product.catalogueCategory = getCatalogueCategory(product);
+  product.catalogueGroup = getCatalogueGroup(product);
+
+  const suppliedKeywords =
+    Array.isArray(product.keywords)
+      ? product.keywords
+      : [];
+
+  const featureKeywords =
+    Array.isArray(product.features)
+      ? product.features
+      : [];
+
+  const colourKeywords =
+    Array.isArray(product.colours)
+      ? product.colours
+      : [];
+
+  const aliasKeywords =
+    PRODUCT_KEYWORD_ALIASES[product.catalogueCategory] || [];
+
+  product.keywords = [
+    ...new Set(
+      [
+        ...suppliedKeywords,
+        ...aliasKeywords,
+        ...featureKeywords,
+        ...colourKeywords,
+        product.subcategory
+      ].filter(Boolean)
+    )
+  ];
+});
+
+
 const PRODUCT_BRANDS = [
   ...new Set(
     PRODUCTS
@@ -340,8 +462,49 @@ const PRODUCT_BRANDS = [
   )
 ].sort();
 
+
+const PRODUCT_CATEGORY_GROUPS = [
+  {
+    label: "Paint",
+    value: "paint",
+    categories: [
+      "Interior Paint",
+      "Exterior Paint",
+      "Interior & Exterior Paint",
+      "Primers",
+      "Wall Fillers",
+      "Waterproofing",
+      "Wood Finishes",
+      "Metal Finishes",
+      "Floor Paint",
+      "Enamel Paint",
+      "Surface Preparation",
+      "Adhesives & Repair"
+    ]
+  },
+  {
+    label: "Accessories & Tools",
+    value: "accessories",
+    categories: [
+      "Brushes",
+      "Paint Accessories"
+    ]
+  },
+  {
+    label: "Beyond Colour",
+    value: "beyond",
+    categories: [
+      "Handmade Sinks",
+      "Stainless-Steel Taps"
+    ]
+  }
+];
+
+
 const PRODUCT_CATEGORIES = [
   ...new Set(
-    PRODUCTS.map((product) => product.category)
+    PRODUCTS.map(
+      (product) => product.catalogueCategory
+    )
   )
 ].sort();

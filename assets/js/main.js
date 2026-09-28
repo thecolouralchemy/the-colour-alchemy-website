@@ -170,7 +170,7 @@ function renderProductCard(product) {
             </span>
 
             <span class="badge-pill">
-              ${product.category}
+              ${product.catalogueCategory || product.category}
             </span>
 
           </div>
@@ -349,7 +349,7 @@ function setupProductDetailModal() {
           </span>
 
           <span class="badge-pill">
-            ${product.category}
+            ${product.catalogueCategory || product.category}
           </span>
         `;
       }
@@ -776,6 +776,237 @@ function renderFeaturedProducts() {
 }
 
 
+
+/**
+ * Homepage gallery lightbox.
+ * Uses the single Bootstrap modal in index.html and the real supplied images.
+ */
+function setupGalleryLightbox() {
+  const modal =
+    document.getElementById(
+      "galleryLightbox"
+    );
+
+  if (!modal) {
+    return;
+  }
+
+
+  const image =
+    document.getElementById(
+      "galleryLightboxImage"
+    );
+
+  const caption =
+    document.getElementById(
+      "galleryLightboxCaption"
+    );
+
+
+  modal.addEventListener(
+    "show.bs.modal",
+    (event) => {
+      const trigger =
+        event.relatedTarget;
+
+
+      if (!trigger) {
+        return;
+      }
+
+
+      const src =
+        trigger.getAttribute(
+          "data-gallery-src"
+        )
+        ||
+        "";
+
+
+      const alt =
+        trigger.getAttribute(
+          "data-gallery-alt"
+        )
+        ||
+        "The Colour Alchemy gallery image";
+
+
+      const copy =
+        trigger.getAttribute(
+          "data-gallery-caption"
+        )
+        ||
+        alt;
+
+
+      if (image) {
+        image.src = src;
+        image.alt = alt;
+      }
+
+
+      if (caption) {
+        caption.textContent = copy;
+      }
+    }
+  );
+
+
+  modal.addEventListener(
+    "hidden.bs.modal",
+    () => {
+      if (image) {
+        image.src = "";
+        image.alt = "";
+      }
+
+      if (caption) {
+        caption.textContent = "";
+      }
+    }
+  );
+
+
+  document
+    .querySelectorAll(
+      ".gallery-slide"
+    )
+    .forEach(
+      (slide) => {
+        const slideImage =
+          slide.querySelector(
+            ".showroom-slide-image"
+          );
+
+        const trigger =
+          slide.querySelector(
+            ".gallery-lightbox-trigger"
+          );
+
+
+        if (
+          !slideImage
+          ||
+          !trigger
+        ) {
+          return;
+        }
+
+
+        slideImage.addEventListener(
+          "click",
+          () => {
+            trigger.click();
+          }
+        );
+      }
+    );
+}
+
+
+/**
+ * Inspiration page palette filtering.
+ * No external colour names or copied content are used.
+ */
+function setupInspirationFilters() {
+  const buttons =
+    Array.from(
+      document.querySelectorAll(
+        "[data-inspiration-filter]"
+      )
+    );
+
+  const cards =
+    Array.from(
+      document.querySelectorAll(
+        "[data-inspiration-card]"
+      )
+    );
+
+
+  if (
+    !buttons.length
+    ||
+    !cards.length
+  ) {
+    return;
+  }
+
+
+  const applyFilter =
+    (filter) => {
+      cards.forEach(
+        (card) => {
+          const spaces =
+            (
+              card.getAttribute(
+                "data-inspiration-space"
+              )
+              ||
+              ""
+            )
+              .split(/\s+/)
+              .filter(Boolean);
+
+
+          const show =
+            filter === "all"
+            ||
+            spaces.includes(
+              filter
+            );
+
+
+          card.hidden =
+            !show;
+        }
+      );
+
+
+      buttons.forEach(
+        (button) => {
+          const active =
+            button.getAttribute(
+              "data-inspiration-filter"
+            )
+            ===
+            filter;
+
+
+          button.classList.toggle(
+            "is-active",
+            active
+          );
+
+
+          button.setAttribute(
+            "aria-pressed",
+            String(active)
+          );
+        }
+      );
+    };
+
+
+  buttons.forEach(
+    (button) => {
+      button.addEventListener(
+        "click",
+        () => {
+          applyFilter(
+            button.getAttribute(
+              "data-inspiration-filter"
+            )
+            ||
+            "all"
+          );
+        }
+      );
+    }
+  );
+}
+
+
 /* =========================================================
    MAIN SITE INITIALISATION
    ========================================================= */
@@ -794,6 +1025,10 @@ document.addEventListener(
     renderFeaturedProducts();
 
     setupProductDetailModal();
+
+    setupGalleryLightbox();
+
+    setupInspirationFilters();
 
     setupNavbarScrollState();
 
