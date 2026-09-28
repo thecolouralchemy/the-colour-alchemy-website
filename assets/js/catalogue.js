@@ -55,6 +55,7 @@ function getFilteredProducts() {
       product.category,
       product.subcategory,
       product.description,
+      Array.isArray(product.keywords) ? product.keywords.join(" ") : product.keywords,
     ]
       .filter(Boolean)
       .join(" ")
@@ -145,7 +146,8 @@ function clearFilters() {
 
 function applyUrlFilters() {
   const params = new URLSearchParams(window.location.search);
-  const brandParam = params.get("brand");
+  const rawBrandParam = params.get("brand");
+  const brandParam = rawBrandParam === "Causeway" ? "Asian Paints Causeway" : rawBrandParam;
   const categoryParam = params.get("category");
   const searchParam = params.get("search");
 

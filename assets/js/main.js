@@ -93,7 +93,7 @@ function renderProductImage(
         </span>
 
         <small>
-          Add your product photo
+          Image coming soon
         </small>
       </div>
     `;
@@ -841,7 +841,7 @@ function setupAlchemyAssistant() {
 
 
   const mascotSrc =
-    "assets/img/whatsapp/tca-cartoon-boy-widjet.png";
+    "assets/img/whatsapp/tca-cartoon-boy-widget.png";
 
 
   const whatsappUrl =

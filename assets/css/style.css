@@ -5568,251 +5568,15 @@ button.active {
     bottom: 0;
   }
 }
+
 /* =========================================================
-   GALLERY — FINAL COMPACT PROFESSIONAL SIZE
-   Paste at VERY BOTTOM of style.css
-   ========================================================= */
-
-.showroom-carousel {
-  max-width: 1050px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-/* DESKTOP */
-.gallery-slide {
-  height: 430px !important;
-}
-
-
-/* Keep photos proportional and professional */
-.showroom-slide-image {
-  width: 100% !important;
-  height: 100% !important;
-
-  object-fit: cover !important;
-  object-position: center center !important;
-}
-
-
-/* TABLET */
-@media (max-width: 991.98px) {
-
-  .gallery-slide {
-    height: 370px !important;
-  }
-
-}
-
-
-/* MOBILE */
-@media (max-width: 767.98px) {
-
-  .gallery-slide {
-    height: 310px !important;
-  }
-
-  .showroom-caption {
-    left: 20px;
-    right: 20px;
-    bottom: 48px;
-  }
-
-  .showroom-caption h3 {
-    font-size: 1.65rem;
-  }
-
-}
-
-
-/* SMALL MOBILE */
-@media (max-width: 575.98px) {
-
-  .gallery-slide {
-    height: 270px !important;
-  }
-
-  .showroom-caption {
-    left: 18px;
-    right: 18px;
-    bottom: 42px;
-  }
-
-  .showroom-caption h3 {
-    font-size: 1.4rem;
-  }
-
-  .showroom-caption p {
-    display: none;
-  }
-
-}
-/* =========================================================
-   GALLERY — FINAL SMALLER / FULL IMAGE FIX
-   KEEP THIS AT THE VERY BOTTOM OF style.css
+   HOMEPAGE FINAL REFINEMENTS
+   Consolidated overrides for the current index.html
    ========================================================= */
 
 
-/* Smaller overall gallery */
-.showroom-carousel {
-  width: 100%;
-  max-width: 900px !important;
-
-  margin-left: auto !important;
-  margin-right: auto !important;
-
-  border-radius: 18px;
-}
-
-
-/* Smaller desktop height */
-.gallery-slide {
-  height: 340px !important;
-
-  background: #0b0b0b !important;
-}
-
-
-/* SHOW THE FULL PHOTO — DON'T CROP IT */
-.showroom-slide-image {
-  width: 100% !important;
-  height: 100% !important;
-
-  object-fit: contain !important;
-  object-position: center center !important;
-
-  transform: none !important;
-}
-
-
-/* Disable the old automatic zoom */
-.showroom-carousel
-.carousel-item.active
-.showroom-slide-image {
-  transform: none !important;
-}
-
-
-/* Slightly smaller caption */
-.showroom-caption {
-  left: 4% !important;
-  bottom: 42px !important;
-
-  max-width: 500px !important;
-}
-
-
-.showroom-caption h3 {
-  font-size: clamp(
-    1.6rem,
-    2.7vw,
-    2.4rem
-  ) !important;
-
-  line-height: 1.08;
-}
-
-
-.showroom-caption p {
-  max-width: 460px;
-
-  font-size: 0.88rem;
-  line-height: 1.5;
-}
-
-
-/* Smaller navigation buttons */
-.gallery-control {
-  width: 42px !important;
-  height: 42px !important;
-}
-
-
 /* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 991.98px) {
-
-  .showroom-carousel {
-    max-width: 820px !important;
-  }
-
-  .gallery-slide {
-    height: 320px !important;
-  }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 767.98px) {
-
-  .showroom-carousel {
-    width: calc(100% - 10px);
-    max-width: 100% !important;
-  }
-
-  .gallery-slide {
-    height: 270px !important;
-  }
-
-  .showroom-caption {
-    left: 18px !important;
-    right: 18px !important;
-    bottom: 38px !important;
-  }
-
-  .showroom-caption h3 {
-    font-size: 1.55rem !important;
-  }
-
-  .showroom-caption p {
-    font-size: 0.8rem;
-  }
-
-  .gallery-control {
-    width: 36px !important;
-    height: 36px !important;
-  }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 575.98px) {
-
-  .gallery-slide {
-    height: 230px !important;
-  }
-
-  .showroom-caption {
-    bottom: 34px !important;
-  }
-
-  .showroom-caption-kicker {
-    font-size: 0.58rem;
-  }
-
-  .showroom-caption h3 {
-    font-size: 1.3rem !important;
-  }
-
-  .showroom-caption p {
-    display: none;
-  }
-
-}
-/* =========================================================
-   GALLERY — ALIGN CARD WITH WEBSITE CONTAINER
-   Paste at VERY BOTTOM of style.css
+   GALLERY — FINAL RESPONSIVE PRESENTATION
    ========================================================= */
 
 .showroom-carousel {
@@ -5823,61 +5587,216 @@ button.active {
   margin-right: 0 !important;
 
   border-radius: 22px !important;
+  overflow: hidden;
+
+  background: #0b0b0b;
 }
 
 
-/* Desktop */
+/* Keep the gallery aligned with the website container. */
 .gallery-slide {
+  position: relative;
+
+  width: 100%;
   height: 400px !important;
+
+  overflow: hidden;
+
+  background: #0b0b0b !important;
 }
 
 
-/* Tablet */
-@media (max-width: 991.98px) {
+/* Show the complete supplied showroom photographs without forced cropping. */
+.showroom-slide-image {
+  display: block;
 
-  .showroom-carousel {
-    width: 100% !important;
-    max-width: none !important;
-  }
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  background: #0b0b0b;
+
+  transform: none !important;
+}
+
+
+/* Disable the older cinematic zoom for the final gallery presentation. */
+.showroom-carousel
+.carousel-item.active
+.showroom-slide-image {
+  transform: none !important;
+}
+
+
+/* Previous / next arrows are intentionally removed from the current gallery. */
+.showroom-carousel-control,
+.showroom-carousel .gallery-control {
+  display: none !important;
+}
+
+
+/* Keep captions readable over both landscape and portrait photographs. */
+.showroom-caption {
+  left: 4% !important;
+  right: auto !important;
+
+  bottom: 44px !important;
+
+  max-width: 500px !important;
+
+  text-align: left;
+}
+
+
+.showroom-caption h3 {
+  font-size:
+    clamp(
+      1.65rem,
+      2.7vw,
+      2.45rem
+    ) !important;
+
+  line-height: 1.08;
+}
+
+
+.showroom-caption p {
+  max-width: 460px;
+
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+
+/* Keep the indicator treatment clean and unobtrusive. */
+.showroom-carousel
+.carousel-indicators {
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   GALLERY — TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
 
   .gallery-slide {
     height: 350px !important;
   }
 
+
+  .showroom-caption {
+    left: 28px !important;
+    right: 28px !important;
+
+    bottom: 42px !important;
+
+    max-width: 460px !important;
+  }
+
 }
 
 
-/* Mobile */
+/* =========================================================
+   GALLERY — MOBILE
+   ========================================================= */
+
 @media (max-width: 767.98px) {
 
   .showroom-carousel {
-    width: 100% !important;
-    max-width: none !important;
+    border-radius: 18px !important;
   }
+
 
   .gallery-slide {
     height: 300px !important;
   }
 
+
+  .showroom-caption {
+    left: 20px !important;
+    right: 20px !important;
+
+    bottom: 40px !important;
+
+    max-width: none !important;
+  }
+
+
+  .showroom-caption h3 {
+    font-size: 1.55rem !important;
+  }
+
+
+  .showroom-caption p {
+    max-width: 390px;
+
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
 }
 
 
-/* Small mobile */
+/* =========================================================
+   GALLERY — SMALL MOBILE
+   ========================================================= */
+
 @media (max-width: 575.98px) {
 
   .gallery-slide {
     height: 260px !important;
   }
 
+
+  .showroom-caption {
+    left: 18px !important;
+    right: 18px !important;
+
+    bottom: 36px !important;
+  }
+
+
+  .showroom-caption-kicker {
+    margin-bottom: 0.45rem;
+
+    font-size: 0.6rem;
+  }
+
+
+  .showroom-caption h3 {
+    margin-bottom: 0.55rem;
+
+    font-size: 1.3rem !important;
+  }
+
+
+  .showroom-caption p {
+    display: none;
+  }
+
+
+  .gallery-caption-link {
+    font-size: 0.68rem;
+  }
+
 }
+
+
 /* =========================================================
-   NAVBAR LOGO — SAHEED SONS / SINCE 1986
-   Logo stays in its existing position
+   NAVBAR BRAND HERITAGE
+   Logo stays in the existing position.
+   POWERED BY / SAHEED SONS / SINCE 1986 sit beneath it.
    ========================================================= */
 
 .navbar-brand-heritage {
   display: inline-flex !important;
+
   flex-direction: column;
+
   align-items: center !important;
   justify-content: center;
 
@@ -5885,30 +5804,60 @@ button.active {
 
   margin-right: 1.4rem;
 
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
   text-decoration: none;
 }
 
 
-/* Keep existing logo dimensions */
 .navbar-brand-heritage .brand-mark {
   flex-shrink: 0;
 }
 
 
-/* Text directly below logo */
+/* Heritage copy directly below the existing logo. */
 .brand-heritage {
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
 
   margin-top: 3px;
 
-  line-height: 1;
   text-align: center;
+
+  line-height: 1;
 }
 
 
-/* SAHEED SONS */
+/* POWERED BY — deliberately smaller than SAHEED SONS. */
+.brand-powered {
+  margin-bottom: 3px;
+
+  font-family:
+    "Work Sans",
+    sans-serif;
+
+  font-size: 0.56rem;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  color: rgba(227, 200, 150, 0.82);
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 2px 5px
+    rgba(0, 0, 0, 0.48);
+}
+
+
+/* SAHEED SONS — restrained metallic-gold heritage treatment. */
 .brand-heritage-name {
   font-family:
     "Fraunces",
@@ -5938,15 +5887,15 @@ button.active {
   color: #d2a34d;
 
   text-shadow:
-    0 1px 0 rgba(255, 236, 170, 0.18),
-    0 2px 2px rgba(72, 42, 6, 0.45),
+    0 1px 0 rgba(255, 236, 170, 0.16),
+    0 2px 2px rgba(72, 42, 6, 0.40),
     0 4px 8px rgba(0, 0, 0, 0.34);
 
   white-space: nowrap;
 }
 
 
-/* SINCE 1986 */
+/* SINCE 1986 — smallest heritage line. */
 .brand-heritage-since {
   margin-top: 4px;
 
@@ -5957,41 +5906,47 @@ button.active {
   font-size: 0.48rem;
   font-weight: 700;
 
-  letter-spacing: 0.28em;
-
-  color: rgba(227, 200, 150, 0.86);
+  letter-spacing: 0.26em;
 
   text-transform: uppercase;
+
+  color: rgba(227, 200, 150, 0.82);
 
   white-space: nowrap;
 
   text-shadow:
-    0 2px 5px rgba(0, 0, 0, 0.6);
+    0 2px 5px
+    rgba(0, 0, 0, 0.55);
 }
 
 
-/* Subtle hover only */
 .navbar-brand-heritage:hover
 .brand-heritage-name {
-  filter: brightness(1.12);
+  filter: brightness(1.1);
 }
 
 
 /* =========================================================
-   NAVIGATION — KEEP CENTRED
+   NAVIGATION — PRESERVE CENTRED DESKTOP ALIGNMENT
    ========================================================= */
 
 @media (min-width: 992px) {
 
   .navbar-alchemy .container {
     position: relative;
+
+    align-items: center;
   }
+
 
   .navbar-alchemy #mainNav {
     justify-content: center;
   }
 
-  .navbar-alchemy #mainNav .navbar-nav {
+
+  .navbar-alchemy
+  #mainNav
+  .navbar-nav {
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -6000,14 +5955,20 @@ button.active {
 
 
 /* =========================================================
-   TABLET
+   NAVBAR HERITAGE — TABLET
    ========================================================= */
 
 @media (max-width: 991.98px) {
 
+  .brand-powered {
+    font-size: 0.5rem;
+  }
+
+
   .brand-heritage-name {
     font-size: 0.72rem;
   }
+
 
   .brand-heritage-since {
     font-size: 0.43rem;
@@ -6017,7 +5978,7 @@ button.active {
 
 
 /* =========================================================
-   MOBILE
+   NAVBAR HERITAGE — MOBILE
    ========================================================= */
 
 @media (max-width: 575.98px) {
@@ -6026,20 +5987,73 @@ button.active {
     margin-right: 0.5rem;
   }
 
+
   .brand-heritage {
     margin-top: 2px;
   }
 
+
+  .brand-powered {
+    margin-bottom: 2px;
+
+    font-size: 0.45rem;
+
+    letter-spacing: 0.15em;
+  }
+
+
   .brand-heritage-name {
-    font-size: 0.62rem;
+    font-size: 0.64rem;
+
     letter-spacing: 0.06em;
   }
+
 
   .brand-heritage-since {
     margin-top: 3px;
 
     font-size: 0.38rem;
-    letter-spacing: 0.20em;
+
+    letter-spacing: 0.19em;
+  }
+
+}
+
+
+/* =========================================================
+   HOMEPAGE HERO — TEXT FIT FOR THE CURRENT COPY
+   ========================================================= */
+
+.home-hero-copy
+.section-kicker {
+  max-width: 620px;
+}
+
+
+.home-hero-copy h1 {
+  text-wrap: balance;
+}
+
+
+.home-hero-lede {
+  text-wrap: pretty;
+}
+
+
+/* =========================================================
+   FOOTER — SMALL-SCREEN BALANCE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0.45rem;
+
+    text-align: center;
   }
 
 }

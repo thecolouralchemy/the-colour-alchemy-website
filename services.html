@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Services | The Colour Alchemy">
   <meta property="og:description" content="Everything you need for a paint project, from colour mixing to tools and fittings.">
-  <meta property="og:image" content="assets/img/logo/logo-web.png">
+  <meta property="og:image" content="https://www.thecolouralchemy.lk/assets/img/logo/logo-web.png">
   <meta property="og:url" content="https://www.thecolouralchemy.lk/services.html">
   <meta property="og:locale" content="en_LK">
 
@@ -24,6 +24,23 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "The Colour Alchemy",
+    "url": "https://www.thecolouralchemy.lk/",
+    "telephone": "+94 41 222 2863",
+    "email": "saheedsons53@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "53 Old Tangalle Road, Kotuwegoda",
+      "addressLocality": "Matara",
+      "addressCountry": "LK"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -32,8 +49,31 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-alchemy sticky-top" aria-label="Main navigation">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <span class="brand-mark" aria-hidden="true"><img src="assets/img/logo/logo-web.png" alt="The Colour Alchemy logo"></span>
+        <a
+          class="navbar-brand navbar-brand-heritage"
+          href="index.html"
+          aria-label="The Colour Alchemy home"
+        >
+          <span class="brand-mark">
+            <img
+              src="assets/img/logo/logo-web.png"
+              alt="The Colour Alchemy logo"
+            >
+          </span>
+
+          <span class="brand-heritage">
+            <span class="brand-powered">
+              POWERED BY
+            </span>
+
+            <span class="brand-heritage-name">
+              SAHEED SONS
+            </span>
+
+            <span class="brand-heritage-since">
+              SINCE 1986
+            </span>
+          </span>
         </a>
         <div class="d-flex align-items-center gap-2 order-lg-3">
           <a class="btn-quote-nav d-none d-lg-inline-flex" href="quotation.html">
@@ -79,7 +119,7 @@
         <span class="section-kicker">What we offer</span>
         <h1 class="h2 mb-2">Services</h1>
         <div class="spectrum-bar spectrum-sm mb-3"></div>
-        <p class="mb-0">Everything you need for a paint project, from the colour to the tools.</p>
+        <p class="mb-0">Professional colour mixing, paint and colour selection, and practical project guidance — supported by paint accessories, tools, sinks and taps.</p>
       </div>
     </section>
 
@@ -90,8 +130,7 @@
             <div class="card-alchemy">
               <i class="bi bi-palette card-icon text-gold" aria-hidden="true"></i>
               <h3>Professional Colour Mixing</h3>
-              <p class="small mb-0">Bring us the shade you want and we mix it in-store, using the
-                paint range that suits your surface. See our <a href="colour-mixing.html">Colour Mixing</a> page for how it works.</p>
+              <p class="small mb-0">Bring a colour reference or idea and our team can guide you through suitable options and professional in-store mixing. See our <a href="colour-mixing.html">Colour Mixing</a> page for the process.</p>
             </div>
           </div>
           <div class="col-sm-6 col-lg-4">
@@ -99,6 +138,13 @@
               <i class="bi bi-chat-dots card-icon text-gold" aria-hidden="true"></i>
               <h3>Paint Selection Assistance</h3>
               <p class="small mb-0">Practical guidance on choosing products and finishes for interior walls, exteriors, wood and metal.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="card-alchemy">
+              <i class="bi bi-clipboard-check card-icon text-gold" aria-hidden="true"></i>
+              <h3>Product / Project Guidance</h3>
+              <p class="small mb-0">Practical support when comparing paint types, preparation products, quantities and the tools needed for a project.</p>
             </div>
           </div>
           <div class="col-sm-6 col-lg-4">
@@ -206,8 +252,10 @@
       <div class="spectrum-bar spectrum-divider" aria-hidden="true"></div>
 
       <div class="footer-bottom">
-        <span>&copy; <span id="footer-year"></span> The Colour Alchemy.</span>
-        <span>Saheed Sons</span>
+        <span>
+          &copy; <span id="footer-year"></span> The Colour Alchemy. All Rights Reserved.
+        </span>
+        <span>Powered by Saheed Sons · Since 1986</span>
       </div>
     </div>
   </footer>
