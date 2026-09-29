@@ -27,10 +27,31 @@
     buttonLoading?.classList.toggle("d-none", !isLoading);
   }
 
-  function setStatus(type, message) {
+  function setStatus(type, message, options = {}) {
     if (!status) return;
+
     status.className = `quote-status ${type ? `is-${type}` : ""}`.trim();
-    status.innerHTML = message;
+    status.replaceChildren();
+
+    if (options.icon) {
+      const icon = document.createElement("i");
+      icon.className = `bi ${options.icon}`;
+      icon.setAttribute("aria-hidden", "true");
+      status.appendChild(icon);
+    }
+
+    const span = document.createElement("span");
+    span.textContent = message;
+    status.appendChild(span);
+
+    if (options.emailLink) {
+      span.append(" ");
+      const link = document.createElement("a");
+      link.href = `mailto:${options.emailLink}`;
+      link.textContent = options.emailLink;
+      span.appendChild(link);
+      span.append(".");
+    }
   }
 
   function validateForm() {
@@ -103,13 +124,18 @@
       form.classList.remove("was-validated");
       setStatus(
         "success",
-        '<i class="bi bi-check-circle" aria-hidden="true"></i><span>Thank you. Your quotation request has been submitted. We’ll contact you using the details provided.</span>'
+        "Thank you. Your quotation request has been submitted. We’ll contact you using the details provided.",
+        { icon: "bi-check-circle" }
       );
       status?.scrollIntoView({ behavior: "smooth", block: "center" });
     } catch (error) {
       setStatus(
         "error",
-        '<i class="bi bi-exclamation-circle" aria-hidden="true"></i><span>We could not send the form right now. Please use the WhatsApp button or email <a href="mailto:saheedsons53@gmail.com">saheedsons53@gmail.com</a>.</span>'
+        "We could not send the form right now. Please use the WhatsApp button or email",
+        {
+          icon: "bi-exclamation-circle",
+          emailLink: "saheedsons53@gmail.com"
+        }
       );
     } finally {
       setLoading(false);

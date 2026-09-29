@@ -27,7 +27,7 @@ function wireWhatsAppLinks(scope = document) {
 
     el.setAttribute("href", buildWhatsAppLink(msg));
     el.setAttribute("target", "_blank");
-    el.setAttribute("rel", "noopener");
+    el.setAttribute("rel", "noopener noreferrer");
   });
 }
 
@@ -70,6 +70,18 @@ function setFooterYear() {
 }
 
 
+
+
+/** Escape text before inserting trusted catalogue data into HTML templates. */
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 /**
  * Renders product image.
  */
@@ -89,7 +101,7 @@ function renderProductImage(
         ></i>
 
         <span>
-          ${product.name}
+          ${escapeHtml(product.name)}
         </span>
 
         <small>
@@ -104,7 +116,7 @@ function renderProductImage(
 
   const fallbackHandler =
     fallback
-      ? ` onerror="this.onerror=null;this.src='${fallback}'"`
+      ? ` onerror="this.onerror=null;this.src='${escapeHtml(fallback)}'"`
       : "";
 
   const lazyAttr =
@@ -114,8 +126,8 @@ function renderProductImage(
 
   return `
     <img
-      src="${product.image}"
-      alt="${product.brand} ${product.name}"
+      src="${escapeHtml(product.image)}"
+      alt="${escapeHtml(product.brand)} ${escapeHtml(product.name)}"
       ${lazyAttr}
       decoding="async"
       referrerpolicy="no-referrer"
@@ -166,21 +178,21 @@ function renderProductCard(product) {
           <div class="product-badges">
 
             <span class="badge-pill">
-              ${product.brand}
+              ${escapeHtml(product.brand)}
             </span>
 
             <span class="badge-pill">
-              ${product.catalogueCategory || product.category}
+              ${escapeHtml(product.catalogueCategory || product.category)}
             </span>
 
           </div>
 
           <h3 class="product-name">
-            ${product.name}
+            ${escapeHtml(product.name)}
           </h3>
 
           <p class="product-desc">
-            ${product.description}
+            ${escapeHtml(product.description)}
           </p>
 
           ${
@@ -195,14 +207,14 @@ function renderProductCard(product) {
                     Sizes:
                   </strong>
 
-                  ${sizesText}
+                  ${escapeHtml(sizesText)}
                 </p>
               `
               : ""
           }
 
           <p class="product-avail">
-            ${product.availability}
+            ${escapeHtml(product.availability)}
           </p>
 
           <div class="product-actions">
@@ -219,7 +231,7 @@ function renderProductCard(product) {
 
             <a
               class="btn-whatsapp-solid"
-              data-whatsapp-msg="${whatsAppMsg}"
+              data-whatsapp-msg="${escapeHtml(whatsAppMsg)}"
               href="#"
             >
 
@@ -345,11 +357,11 @@ function setupProductDetailModal() {
       if (modalBadges) {
         modalBadges.innerHTML = `
           <span class="badge-pill">
-            ${product.brand}
+            ${escapeHtml(product.brand)}
           </span>
 
           <span class="badge-pill">
-            ${product.catalogueCategory || product.category}
+            ${escapeHtml(product.catalogueCategory || product.category)}
           </span>
         `;
       }
@@ -362,6 +374,14 @@ function setupProductDetailModal() {
       if (modalSizes) {
         modalSizes.textContent =
           sizesText;
+
+        const sizesRow =
+          modalSizes.closest("p");
+
+        if (sizesRow) {
+          sizesRow.hidden =
+            !sizesText;
+        }
       }
 
       if (modalAvailability) {

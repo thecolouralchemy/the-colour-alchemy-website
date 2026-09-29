@@ -10,9 +10,9 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>The Colour Alchemy | Paint Shop & Colour Mixing in Matara</title>
+  <title>The Colour Alchemy | Professional Colour Mixing & Paint Shop in Matara</title>
 
-  <meta name="description" content="The Colour Alchemy in Kotuwegoda, Matara offers professional colour mixing, Dulux, JAT, Robbialac and Causeway paints, paint accessories, tools, handmade sinks and stainless-steel taps.">
+  <meta name="description" content="The Colour Alchemy in Kotuwegoda, Matara offers professional colour mixing, paint and colour selection, Dulux, JAT, Robbialac and Causeway paints, accessories, tools, handmade sinks and stainless-steel taps.">
 
   <link
     rel="canonical"
@@ -27,21 +27,14 @@
     content="website"
   >
 
-  <meta
-    property="og:title"
-    content="The Colour Alchemy | Paint & Colour Mixing Shop in Matara"
-  >
+  <meta property="og:title" content="The Colour Alchemy | Professional Colour Mixing & Paint Shop in Matara">
 
-  <meta
-    property="og:description"
-    content="Professional paint and colour solutions in Kotuwegoda, Matara — Dulux, JAT, Robbialac, Causeway and professional colour mixing."
-  >
+  <meta property="og:description" content="The Colour Alchemy in Kotuwegoda, Matara offers professional colour mixing, paint and colour selection, Dulux, JAT, Robbialac and Causeway paints, accessories, tools, handmade sinks and stainless-steel taps.">
 
   <meta
     property="og:image"
     content="https://thecolouralchemy.github.io/the-colour-alchemy-website/assets/img/logo/logo-web.png"
   >
-  <meta property="og:image:alt" content="The Colour Alchemy logo">
 
   <meta
     property="og:url"
@@ -102,684 +95,7 @@
 
 
 
-  <!-- =====================================================
-       GOOGLE REVIEWS STYLES
-       ===================================================== -->
 
-  <style>
-
-    .google-reviews-section {
-      position: relative;
-      overflow: hidden;
-
-      background:
-        radial-gradient(
-          circle at 50% 0%,
-          rgba(196, 151, 65, 0.14),
-          transparent 42%
-        ),
-        #0d0d0d;
-    }
-
-
-    .google-reviews-section::before {
-      content: "";
-
-      position: absolute;
-
-      width: 600px;
-      height: 600px;
-
-      top: -430px;
-      left: 50%;
-
-      transform: translateX(-50%);
-
-      border-radius: 50%;
-
-      background:
-        rgba(196, 151, 65, 0.12);
-
-      filter: blur(100px);
-
-      pointer-events: none;
-    }
-
-
-    .google-reviews-section .container {
-      position: relative;
-      z-index: 2;
-    }
-
-
-    .google-review-heading {
-      max-width: 730px;
-
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-
-    .google-review-heading p {
-      max-width: 600px;
-
-      margin-left: auto;
-      margin-right: auto;
-
-      color:
-        var(
-          --color-text-muted,
-          rgba(255, 255, 255, 0.63)
-        );
-    }
-
-
-
-    /* Google badge */
-
-    .google-review-badge {
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 0.55rem;
-
-      margin-top: 1.1rem;
-
-      padding:
-        0.5rem
-        0.9rem;
-
-      border:
-        1px solid
-        rgba(255, 255, 255, 0.10);
-
-      border-radius: 999px;
-
-      background:
-        rgba(255, 255, 255, 0.035);
-
-      color:
-        rgba(255, 255, 255, 0.76);
-
-      font-size: 0.82rem;
-    }
-
-
-    .google-review-badge i {
-      color: #ffffff;
-    }
-
-
-
-    /* Main carousel */
-
-    #googleReviewsCarousel {
-      position: relative;
-
-      max-width: 960px;
-
-      margin:
-        0 auto;
-
-      padding:
-        0.8rem
-        4.4rem
-        0;
-    }
-
-
-
-    /* Review card */
-
-    .google-review-card {
-      position: relative;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: space-between;
-
-      width: 100%;
-
-      min-height: 315px;
-
-      padding:
-        clamp(
-          1.45rem,
-          3vw,
-          2.35rem
-        );
-
-      border:
-        1px solid
-        rgba(255, 255, 255, 0.09);
-
-      border-radius: 24px;
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.06),
-          rgba(255, 255, 255, 0.018)
-        );
-
-      box-shadow:
-        0 22px 70px
-        rgba(0, 0, 0, 0.32);
-
-      overflow: hidden;
-
-      transition:
-        transform 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
-    }
-
-
-    .google-review-card::before {
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-      left: 0;
-
-      width: 100%;
-      height: 2px;
-
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          #c49741,
-          #e0b55f,
-          transparent
-        );
-
-      opacity: 0.8;
-    }
-
-
-    .google-review-card:hover {
-      transform:
-        translateY(-5px);
-
-      border-color:
-        rgba(196, 151, 65, 0.40);
-
-      box-shadow:
-        0 28px 80px
-        rgba(0, 0, 0, 0.40);
-    }
-
-
-
-    /* Customer details */
-
-    .google-review-top {
-      display: flex;
-
-      align-items: center;
-
-      gap: 1rem;
-
-      margin-bottom: 1.35rem;
-    }
-
-
-    .google-review-avatar {
-      width: 56px;
-      height: 56px;
-
-      flex:
-        0 0 56px;
-
-      display: grid;
-
-      place-items: center;
-
-      border-radius: 50%;
-
-      background:
-        linear-gradient(
-          135deg,
-          #e2b65e,
-          #8c6828
-        );
-
-      color: #111111;
-
-      font-weight: 700;
-
-      font-size: 1.1rem;
-
-      box-shadow:
-        0 8px 24px
-        rgba(0, 0, 0, 0.28);
-    }
-
-
-    .google-review-name {
-      margin:
-        0
-        0
-        0.2rem;
-
-      color: #ffffff;
-
-      font-size: 1.02rem;
-
-      font-weight: 600;
-    }
-
-
-    .google-review-meta {
-      display: flex;
-
-      align-items: center;
-
-      flex-wrap: wrap;
-
-      gap:
-        0.35rem
-        0.7rem;
-    }
-
-
-    .google-review-stars {
-      color: #fbbc04;
-
-      letter-spacing: 0.075em;
-
-      font-size: 0.83rem;
-    }
-
-
-    .google-review-date {
-      color:
-        rgba(255, 255, 255, 0.46);
-
-      font-size: 0.75rem;
-    }
-
-
-
-    /* Review text */
-
-    .google-review-text {
-      margin: 0;
-
-      color:
-        rgba(255, 255, 255, 0.79);
-
-      font-size:
-        clamp(
-          0.94rem,
-          1.2vw,
-          1.05rem
-        );
-
-      line-height: 1.8;
-    }
-
-
-    .google-review-text.is-collapsible:not(.is-expanded) {
-      display: -webkit-box;
-
-      -webkit-box-orient: vertical;
-
-      -webkit-line-clamp: 6;
-
-      overflow: hidden;
-    }
-
-
-
-    /* Read more */
-
-    .google-review-read-more {
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 0.4rem;
-
-      width: fit-content;
-
-      margin-top: 0.9rem;
-
-      padding: 0;
-
-      border: 0;
-
-      background: transparent;
-
-      color: #d3a552;
-
-      font-size: 0.82rem;
-
-      font-weight: 600;
-
-      cursor: pointer;
-
-      transition:
-        color 0.2s ease;
-    }
-
-
-    .google-review-read-more:hover {
-      color: #f0c676;
-    }
-
-
-    .google-review-read-more::after {
-      content: "\F282";
-
-      font-family:
-        "bootstrap-icons";
-
-      font-size: 0.72rem;
-
-      transition:
-        transform 0.2s ease;
-    }
-
-
-    .google-review-read-more[aria-expanded="true"]::after {
-      transform:
-        rotate(180deg);
-    }
-
-
-
-    /* Footer inside review card */
-
-    .google-review-footer {
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      flex-wrap: wrap;
-
-      gap: 0.8rem;
-
-      margin-top: 1.6rem;
-
-      padding-top: 1.1rem;
-
-      border-top:
-        1px solid
-        rgba(255, 255, 255, 0.07);
-
-      color:
-        rgba(255, 255, 255, 0.46);
-
-      font-size: 0.76rem;
-    }
-
-
-    .google-review-source {
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 0.5rem;
-    }
-
-
-    .google-review-source i {
-      color: #ffffff;
-    }
-
-
-
-    /* Arrows */
-
-    .google-review-control {
-      width: 46px;
-
-      opacity: 1;
-    }
-
-
-    .google-review-control-icon {
-      display: grid;
-
-      place-items: center;
-
-      width: 44px;
-      height: 44px;
-
-      border:
-        1px solid
-        rgba(196, 151, 65, 0.42);
-
-      border-radius: 50%;
-
-      background:
-        rgba(8, 8, 8, 0.86);
-
-      color: #d5a850;
-
-      backdrop-filter:
-        blur(12px);
-
-      transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        color 0.25s ease;
-    }
-
-
-    .google-review-control:hover
-    .google-review-control-icon {
-      transform:
-        scale(1.06);
-
-      background:
-        #c49741;
-
-      color: #111111;
-    }
-
-
-
-    /* Indicators */
-
-    .google-review-indicators {
-      position: static;
-
-      margin:
-        1.4rem
-        0
-        0;
-    }
-
-
-    .google-review-indicators
-    [data-bs-target] {
-      width: 22px;
-      height: 3px;
-
-      margin:
-        0
-        4px;
-
-      border: 0;
-
-      border-radius: 99px;
-
-      background:
-        rgba(255, 255, 255, 0.24);
-
-      opacity: 1;
-    }
-
-
-    .google-review-indicators
-    .active {
-      background:
-        #c49741;
-    }
-
-
-
-    /* Google review buttons */
-
-    .google-review-actions {
-      display: flex;
-
-      justify-content: center;
-
-      flex-wrap: wrap;
-
-      gap: 0.85rem;
-
-      margin-top: 2rem;
-    }
-
-
-    .btn-google-review {
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      gap: 0.55rem;
-
-      min-height: 46px;
-
-      padding:
-        0.72rem
-        1.25rem;
-
-      border:
-        1px solid
-        #c49741;
-
-      border-radius: 8px;
-
-      background:
-        #c49741;
-
-      color: #101010;
-
-      font-weight: 600;
-
-      text-decoration: none;
-
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
-    }
-
-
-    .btn-google-review:hover {
-      transform:
-        translateY(-2px);
-
-      background:
-        #d7ae58;
-
-      border-color:
-        #d7ae58;
-
-      color:
-        #101010;
-    }
-
-
-
-    /* Mobile */
-
-    @media (max-width: 767.98px) {
-
-      #googleReviewsCarousel {
-        padding:
-          0.3rem
-          1.45rem
-          0;
-      }
-
-
-      .google-review-card {
-        min-height: 330px;
-
-        padding: 1.3rem;
-
-        border-radius: 18px;
-      }
-
-
-      .google-review-avatar {
-        width: 48px;
-        height: 48px;
-
-        flex-basis: 48px;
-      }
-
-
-      .google-review-control {
-        width: 34px;
-      }
-
-
-      .google-review-control-icon {
-        width: 34px;
-        height: 34px;
-
-        font-size: 0.8rem;
-      }
-
-
-      .google-review-actions
-      .btn-alchemy-outline,
-
-      .google-review-actions
-      .btn-google-review {
-        width:
-          min(
-            100%,
-            310px
-          );
-
-        justify-content: center;
-      }
-
-
-      .google-review-footer {
-        align-items:
-          flex-start;
-
-        flex-direction:
-          column;
-      }
-
-    }
-
-
-
-    @media (prefers-reduced-motion: reduce) {
-
-      .google-review-card,
-
-      .google-review-control-icon,
-
-      .btn-google-review,
-
-      .google-review-read-more {
-        transition: none;
-      }
-
-    }
-
-  </style>
 
 
 
@@ -844,8 +160,7 @@
           <span class="brand-mark">
             <img
               src="assets/img/logo/logo-web.png"
-              alt="The Colour Alchemy logo"
-             decoding="async">
+              alt="The Colour Alchemy logo" width="240" height="240" decoding="async">
           </span>
 
           <span class="brand-heritage">
@@ -880,7 +195,7 @@
               aria-hidden="true"
             ></i>
 
-            Get Quote
+            Request Quote
 
           </a>
 
@@ -968,10 +283,10 @@
 
               <a
                 class="nav-link"
-                data-page="services.html"
-                href="services.html"
+                data-page="colour-mixing.html"
+                href="colour-mixing.html"
               >
-                Services
+                Colour Mixing
               </a>
 
             </li>
@@ -982,10 +297,10 @@
 
               <a
                 class="nav-link"
-                data-page="colour-mixing.html"
-                href="colour-mixing.html"
+                data-page="services.html"
+                href="services.html"
               >
-                Colour Mixing
+                Services
               </a>
 
             </li>
@@ -1035,7 +350,7 @@
                   aria-hidden="true"
                 ></i>
 
-                Get a Quote
+                Request a Quote
 
               </a>
 
@@ -1105,12 +420,11 @@
 
         <img
           class="home-hero-slide is-active"
-          src="assets/img/hero/slides/hero-slide-01.jpg" fetchpriority="high"
+          src="assets/img/hero/slides/hero-slide-01.jpg"
           alt=""
           width="1600"
           height="900"
-          fetchpriority="high"
-         decoding="async">
+          fetchpriority="high" decoding="async">
 
 
         <img
@@ -1296,6 +610,21 @@
 
 
             <a
+              href="colour-mixing.html"
+              class="btn-alchemy-outline"
+            >
+
+              <i
+                class="bi bi-palette"
+                aria-hidden="true"
+              ></i>
+
+              Explore Colour Mixing
+
+            </a>
+
+
+            <a
               href="#"
               class="btn-alchemy-outline"
               data-whatsapp-msg="Hi, I'd like to know more about The Colour Alchemy."
@@ -1306,7 +635,22 @@
                 aria-hidden="true"
               ></i>
 
-              Chat on WhatsApp
+              WhatsApp Us
+
+            </a>
+
+
+            <a
+              href="quotation.html"
+              class="btn-alchemy-outline"
+            >
+
+              <i
+                class="bi bi-file-earmark-text"
+                aria-hidden="true"
+              ></i>
+
+              Request a Quote
 
             </a>
 
@@ -1361,7 +705,7 @@
               <div>
 
                 <h2>
-                  Paint Brands
+                  Leading Brands
                 </h2>
 
                 <p>
@@ -1531,7 +875,7 @@
             <h2
               class="h3 mb-2"
             >
-              Brands We Carry
+              Trusted Global Brands
             </h2>
 
 
@@ -1591,8 +935,7 @@
                   src="assets/img/brands/dulux.jpg"
                   alt="Dulux logo"
                   class="brand-logo-img"
-                  loading="lazy"
-                 decoding="async">
+                  loading="lazy" width="900" height="420" decoding="async">
 
               </div>
 
@@ -1644,8 +987,7 @@
                   src="assets/img/brands/jat.jpg"
                   alt="JAT logo"
                   class="brand-logo-img"
-                  loading="lazy"
-                 decoding="async">
+                  loading="lazy" width="900" height="420" decoding="async">
 
               </div>
 
@@ -1697,8 +1039,7 @@
                   src="assets/img/brands/robbialac.jpg"
                   alt="Robbialac logo"
                   class="brand-logo-img"
-                  loading="lazy"
-                 decoding="async">
+                  loading="lazy" width="900" height="420" decoding="async">
 
               </div>
 
@@ -1750,8 +1091,7 @@
                   src="assets/img/brands/causeway.png"
                   alt="Causeway logo"
                   class="brand-logo-img"
-                  loading="lazy"
-                 decoding="async">
+                  loading="lazy" width="2172" height="724" decoding="async">
 
               </div>
 
@@ -1944,10 +1284,9 @@
 
 
               <img
-                src="assets/img/showroom/colour-mixing-station.png"
+                src="assets/img/showroom/colour-mixing-station.webp"
                 alt="Dulux colour mixing station at The Colour Alchemy in Matara"
-                loading="lazy"
-               decoding="async">
+                loading="lazy" width="1448" height="1086" decoding="async">
 
 
               <figcaption>
@@ -2244,7 +1583,7 @@
                src="assets/img/whatsapp/tca-cartoon-boy-banner.png"
                alt="Alchy - The Colour Alchemy assistant"
                class="alchy-guide-mascot"
-            / decoding="async">
+            / width="578" height="620" loading="lazy" decoding="async">
         </div>
 
         </div>
@@ -2504,7 +1843,7 @@
           type="button"
           data-bs-target="#showroomGallery"
           data-bs-slide-to="5"
-          aria-label="Recognition award"
+          aria-label="Recognition display"
         ></button>
 
       </div>
@@ -2527,19 +1866,18 @@
           <div class="gallery-slide">
 
             <img
-              src="assets/img/showroom/shopfront.png"
+              src="assets/img/showroom/shopfront.webp"
               class="d-block w-100 showroom-slide-image"
               alt="The Colour Alchemy showroom in Kotuwegoda, Matara"
               width="1600"
-              height="900"
-             decoding="async" loading="lazy">
+              height="900" loading="lazy" decoding="async">
 
             <button
               type="button"
               class="gallery-lightbox-trigger"
               data-bs-toggle="modal"
               data-bs-target="#galleryLightbox"
-              data-gallery-src="assets/img/showroom/shopfront.png"
+              data-gallery-src="assets/img/showroom/shopfront.webp"
               data-gallery-alt="The Colour Alchemy showroom in Kotuwegoda, Matara"
               data-gallery-caption="The Colour Alchemy showroom in Kotuwegoda, Matara"
               aria-label="Open this gallery image larger"
@@ -2598,7 +1936,7 @@
           <div class="gallery-slide">
 
             <img
-              src="assets/img/showroom/colour-mixing-station.png"
+              src="assets/img/showroom/colour-mixing-station.webp"
               class="d-block w-100 showroom-slide-image"
               alt="Professional Dulux colour mixing station at The Colour Alchemy"
               width="1600"
@@ -2612,7 +1950,7 @@
               class="gallery-lightbox-trigger"
               data-bs-toggle="modal"
               data-bs-target="#galleryLightbox"
-              data-gallery-src="assets/img/showroom/colour-mixing-station.png"
+              data-gallery-src="assets/img/showroom/colour-mixing-station.webp"
               data-gallery-alt="Professional Dulux colour mixing station at The Colour Alchemy"
               data-gallery-caption="Professional Dulux colour mixing station at The Colour Alchemy"
               aria-label="Open this gallery image larger"
@@ -2671,7 +2009,7 @@
           <div class="gallery-slide">
 
             <img
-              src="assets/img/showroom/gallery-03.jpeg"
+              src="assets/img/showroom/gallery-03.webp"
               class="d-block w-100 showroom-slide-image"
               alt="Paint and colour products at The Colour Alchemy showroom in Matara"
               width="1600"
@@ -2685,7 +2023,7 @@
               class="gallery-lightbox-trigger"
               data-bs-toggle="modal"
               data-bs-target="#galleryLightbox"
-              data-gallery-src="assets/img/showroom/gallery-03.jpeg"
+              data-gallery-src="assets/img/showroom/gallery-03.webp"
               data-gallery-alt="Paint and colour products at The Colour Alchemy showroom in Matara"
               data-gallery-caption="Paint and colour products at The Colour Alchemy showroom in Matara"
               aria-label="Open this gallery image larger"
@@ -2744,7 +2082,7 @@
           <div class="gallery-slide">
 
             <img
-              src="assets/img/showroom/gallery-04.jpeg"
+              src="assets/img/showroom/gallery-04.webp"
               class="d-block w-100 showroom-slide-image"
               alt="The Colour Alchemy paint showroom and product collection"
               width="1600"
@@ -2758,7 +2096,7 @@
               class="gallery-lightbox-trigger"
               data-bs-toggle="modal"
               data-bs-target="#galleryLightbox"
-              data-gallery-src="assets/img/showroom/gallery-04.jpeg"
+              data-gallery-src="assets/img/showroom/gallery-04.webp"
               data-gallery-alt="The Colour Alchemy paint showroom and product collection"
               data-gallery-caption="The Colour Alchemy paint showroom and product collection"
               aria-label="Open this gallery image larger"
@@ -2817,7 +2155,7 @@
           <div class="gallery-slide">
 
             <img
-              src="assets/img/showroom/gallery-05.jpeg"
+              src="assets/img/showroom/gallery-05.webp"
               class="d-block w-100 showroom-slide-image"
               alt="The Colour Alchemy professional paint and colour solutions"
               width="1600"
@@ -2831,7 +2169,7 @@
               class="gallery-lightbox-trigger"
               data-bs-toggle="modal"
               data-bs-target="#galleryLightbox"
-              data-gallery-src="assets/img/showroom/gallery-05.jpeg"
+              data-gallery-src="assets/img/showroom/gallery-05.webp"
               data-gallery-alt="The Colour Alchemy professional paint and colour solutions"
               data-gallery-caption="The Colour Alchemy professional paint and colour solutions"
               aria-label="Open this gallery image larger"
@@ -2891,7 +2229,7 @@
             <img
               src="assets/img/showroom/recognition-award.webp"
               class="d-block w-100 showroom-slide-image"
-              alt="Recognition award displayed by Saheed Sons in Matara"
+              alt="Recognition display at Saheed Sons in Matara"
               width="1086"
               height="1448"
               loading="lazy"
@@ -2904,7 +2242,7 @@
               data-bs-toggle="modal"
               data-bs-target="#galleryLightbox"
               data-gallery-src="assets/img/showroom/recognition-award.webp"
-              data-gallery-alt="Recognition award displayed by Saheed Sons in Matara"
+              data-gallery-alt="Recognition display at Saheed Sons in Matara"
               data-gallery-caption="Recognition connected with the colour-mixing work of Saheed Sons in Matara."
               aria-label="Open recognition award image larger"
             >
@@ -2994,7 +2332,7 @@
           alt=""
           width="1600"
           height="1200"
-         decoding="async" loading="lazy">
+        >
       </div>
 
       <div class="gallery-lightbox-copy">
@@ -3007,205 +2345,48 @@
 </div>
 
     <!-- =====================================================
-         10. GOOGLE REVIEWS
+         10. CUSTOMER FEEDBACK
          ===================================================== -->
 
     <section
-      class="section google-reviews-section"
+      class="section google-feedback-section"
       id="google-reviews"
-      aria-labelledby="google-reviews-title"
+      aria-labelledby="google-feedback-title"
     >
-
-
       <div class="container">
-
-
-        <div
-          class="google-review-heading text-center mb-4"
-        >
-
-
-          <span
-            class="section-kicker"
-          >
-            Customer experiences
-          </span>
-
-
-          <h2
-            class="h3 mb-2"
-            id="google-reviews-title"
-          >
-            What Our Customers Say
-          </h2>
-
-
-          <div
-            class="spectrum-bar spectrum-sm mx-auto mb-3"
-            aria-hidden="true"
-          ></div>
-
-
-          <p class="mb-0">
-
-            Customer feedback displayed from the Saheed Sons Google listing.
-
-          </p>
-
-
-          <div
-            class="google-review-badge"
-          >
-
-            <i
-              class="bi bi-google"
-              aria-hidden="true"
-            ></i>
-
-            <span>
-              Google Reviews
-            </span>
-
+        <div class="google-feedback-card">
+          <div>
+            <span class="section-kicker">Customer feedback</span>
+            <h2 class="h3 mb-2" id="google-feedback-title">See customer feedback on Google</h2>
+            <div class="spectrum-bar spectrum-sm mb-3" aria-hidden="true"></div>
+            <p class="mb-0">
+              Read feedback on the Saheed Sons Google listing or leave a review after your visit.
+              Reviews are shown on Google so the website does not duplicate or edit customer comments.
+            </p>
           </div>
-
-
-        </div>
-
-
-
-
-        <div
-          id="googleReviewsCarousel"
-          class="carousel slide"
-          data-bs-interval="5500"
-          data-bs-pause="hover"
-          data-bs-touch="true"
-          aria-label="Google customer reviews"
-        >
-
-
-          <div
-            class="carousel-inner"
-            id="googleReviewsCarouselInner"
-          ></div>
-
-
-
-
-          <button
-            class="carousel-control-prev google-review-control"
-            type="button"
-            data-bs-target="#googleReviewsCarousel"
-            data-bs-slide="prev"
-            aria-label="Previous review"
-          >
-
-
-            <span
-              class="google-review-control-icon"
+          <div class="google-feedback-actions">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Saheed+Sons+53+Old+Tangalle+Road+Matara+Sri+Lanka"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-alchemy-outline"
             >
-
-              <i
-                class="bi bi-chevron-left"
-                aria-hidden="true"
-              ></i>
-
-            </span>
-
-
-          </button>
-
-
-
-
-          <button
-            class="carousel-control-next google-review-control"
-            type="button"
-            data-bs-target="#googleReviewsCarousel"
-            data-bs-slide="next"
-            aria-label="Next review"
-          >
-
-
-            <span
-              class="google-review-control-icon"
+              <i class="bi bi-google" aria-hidden="true"></i>
+              View Google Listing
+            </a>
+            <a
+              href="https://g.page/r/CdhkRAXPM4owEBM/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-alchemy-primary"
             >
-
-              <i
-                class="bi bi-chevron-right"
-                aria-hidden="true"
-              ></i>
-
-            </span>
-
-
-          </button>
-
-
-
-
-          <div
-            class="carousel-indicators google-review-indicators"
-            id="googleReviewsIndicators"
-          ></div>
-
-
+              <i class="bi bi-star" aria-hidden="true"></i>
+              Leave a Google Review
+            </a>
+          </div>
         </div>
-
-
-
-
-        <div
-          class="google-review-actions"
-        >
-
-
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=Saheed+Sons+Matara+Sri+Lanka"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-alchemy-outline"
-          >
-
-            <i
-              class="bi bi-google"
-              aria-hidden="true"
-            ></i>
-
-            View on Google
-
-          </a>
-
-
-
-
-          <a
-            href="https://g.page/r/CdhkRAXPM4owEBM/review"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-google-review"
-          >
-
-            <i
-              class="bi bi-star-fill"
-              aria-hidden="true"
-            ></i>
-
-            Leave a Google Review
-
-          </a>
-
-
-        </div>
-
-
       </div>
-
-
     </section>
-
-
-
 
 
     <!-- =====================================================
@@ -3589,8 +2770,7 @@
 
           <img
             src="assets/img/logo/logo-web.png"
-            alt="The Colour Alchemy logo"
-           decoding="async">
+            alt="The Colour Alchemy logo" width="240" height="240" decoding="async">
 
 
         </div>
@@ -3985,591 +3165,7 @@
 
 
 
-  <!-- =====================================================
-       GOOGLE REVIEWS
-       Genuine reviews provided from your Google listing
-       ===================================================== -->
 
-  <script>
-
-
-    const GOOGLE_REVIEWS = [
-
-
-      {
-        name: "Ishan Kankanange",
-
-        rating: 5,
-
-        text:
-          "Highly recommend Saheed Sons for anyone looking for a reliable paint shop in Matara. They have quality products, excellent colour mixing, and knowledgeable staff. I'll definitely shop here again.",
-
-        date:
-          "A month ago"
-      },
-
-
-      {
-        name: "ganupa geesara",
-
-        rating: 5,
-
-        text:
-          "Excellent experience from start to finish. The staff took time to understand what I needed and suggested the right paint and colours for my home. Very satisfied with the service.",
-
-        date:
-          "A month ago"
-      },
-
-
-      {
-        name: "Tharusha",
-
-        rating: 5,
-
-        text:
-          "I had a great experience at Saheed Sons Paint Store. They have a wide range of high-quality paints, including trusted brands, with excellent colour options for homes, offices, and commercial projects. The staff are very friendly, knowledgeable, and always ready to help customers choose the right products. The store is well-organized, clean, and offers genuine products at reasonable prices. Their customer service, product quality, and professional advice make them one of the best paint shops in Matara. Highly recommended for anyone looking for quality paint, home painting solutions, and reliable paint supplies in Matara. Thank you for the excellent service.",
-
-        date:
-          "A month ago"
-      },
-
-
-      {
-        name: "Ishan ku",
-
-        rating: 5,
-
-        text:
-          "Excellent paint shop in Matara. The staff were very friendly and helped me choose the perfect colours for my home. Their Dulux colour mixing service was accurate, and the paint quality was excellent. Highly recommended.",
-
-        date:
-          "A month ago"
-      }
-
-
-    ];
-
-
-
-
-
-    function escapeReviewHtml(value) {
-
-
-      return String(
-        value ?? ""
-      )
-
-        .replace(
-          /&/g,
-          "&amp;"
-        )
-
-        .replace(
-          /</g,
-          "&lt;"
-        )
-
-        .replace(
-          />/g,
-          "&gt;"
-        )
-
-        .replace(
-          /"/g,
-          "&quot;"
-        )
-
-        .replace(
-          /'/g,
-          "&#039;"
-        );
-
-
-    }
-
-
-
-
-
-    function reviewInitial(name) {
-
-
-      const value =
-        String(
-          name || "G"
-        ).trim();
-
-
-      return value
-        ? value
-            .charAt(0)
-            .toUpperCase()
-        : "G";
-
-
-    }
-
-
-
-
-
-    function reviewStars(rating) {
-
-
-      const safeRating =
-        Math.max(
-
-          1,
-
-          Math.min(
-            5,
-            Number(rating) || 5
-          )
-
-        );
-
-
-      return (
-        "★".repeat(
-          safeRating
-        )
-        +
-        "☆".repeat(
-          5 - safeRating
-        )
-      );
-
-
-    }
-
-
-
-
-
-    function setupReviewReadMore() {
-
-
-      document
-        .querySelectorAll(
-          "[data-review-toggle]"
-        )
-        .forEach(
-          (button) => {
-
-
-            button.addEventListener(
-              "click",
-              () => {
-
-
-                const index =
-                  button.getAttribute(
-                    "data-review-toggle"
-                  );
-
-
-                const reviewText =
-                  document.getElementById(
-                    `google-review-text-${index}`
-                  );
-
-
-                if (!reviewText) {
-                  return;
-                }
-
-
-                const expanded =
-                  button.getAttribute(
-                    "aria-expanded"
-                  ) === "true";
-
-
-                button.setAttribute(
-                  "aria-expanded",
-                  String(!expanded)
-                );
-
-
-                reviewText.classList.toggle(
-                  "is-expanded",
-                  !expanded
-                );
-
-
-                button.textContent =
-                  expanded
-                    ? "Read more"
-                    : "Show less";
-
-
-              }
-            );
-
-
-          }
-        );
-
-
-    }
-
-
-
-
-
-    function renderGoogleReviews() {
-
-
-      const carousel =
-        document.getElementById(
-          "googleReviewsCarousel"
-        );
-
-
-      const inner =
-        document.getElementById(
-          "googleReviewsCarouselInner"
-        );
-
-
-      const indicators =
-        document.getElementById(
-          "googleReviewsIndicators"
-        );
-
-
-      if (
-        !carousel
-        ||
-        !inner
-        ||
-        !indicators
-      ) {
-
-        return;
-
-      }
-
-
-
-
-      const reviews =
-        GOOGLE_REVIEWS.filter(
-          (review) =>
-            review
-            &&
-            String(
-              review.name || ""
-            ).trim()
-            &&
-            String(
-              review.text || ""
-            ).trim()
-        );
-
-
-
-
-      inner.innerHTML =
-        reviews.map(
-          (review, index) => {
-
-
-            const name =
-              escapeReviewHtml(
-                review.name
-              );
-
-
-            const reviewText =
-              String(
-                review.text || ""
-              );
-
-
-            const text =
-              escapeReviewHtml(
-                reviewText
-              );
-
-
-            const date =
-              escapeReviewHtml(
-                review.date || ""
-              );
-
-
-            const rating =
-              Math.max(
-                1,
-                Math.min(
-                  5,
-                  Number(
-                    review.rating
-                  ) || 5
-                )
-              );
-
-
-            const stars =
-              reviewStars(
-                rating
-              );
-
-
-            const isLong =
-              reviewText.length > 260;
-
-
-
-
-            return `
-
-              <div
-                class="carousel-item ${index === 0 ? "active" : ""}"
-              >
-
-
-                <article
-                  class="google-review-card"
-                >
-
-
-                  <div>
-
-
-                    <div
-                      class="google-review-top"
-                    >
-
-
-                      <div
-                        class="google-review-avatar"
-                        aria-hidden="true"
-                      >
-
-                        ${
-                          escapeReviewHtml(
-                            reviewInitial(
-                              review.name
-                            )
-                          )
-                        }
-
-                      </div>
-
-
-
-
-                      <div>
-
-
-                        <h3
-                          class="google-review-name"
-                        >
-                          ${name}
-                        </h3>
-
-
-
-                        <div
-                          class="google-review-meta"
-                        >
-
-
-                          <span
-                            class="google-review-stars"
-                            aria-label="${rating} out of 5 stars"
-                          >
-                            ${stars}
-                          </span>
-
-
-                          ${
-                            date
-                              ?
-                              `
-                                <span
-                                  class="google-review-date"
-                                >
-                                  ${date}
-                                </span>
-                              `
-                              :
-                              ""
-                          }
-
-
-                        </div>
-
-
-                      </div>
-
-
-                    </div>
-
-
-
-
-                    <p
-                      id="google-review-text-${index}"
-                      class="google-review-text ${
-                        isLong
-                          ? "is-collapsible"
-                          : ""
-                      }"
-                    >
-                      “${text}”
-                    </p>
-
-
-
-
-                    ${
-                      isLong
-                        ?
-                        `
-                          <button
-                            type="button"
-                            class="google-review-read-more"
-                            data-review-toggle="${index}"
-                            aria-expanded="false"
-                            aria-controls="google-review-text-${index}"
-                          >
-                            Read more
-                          </button>
-                        `
-                        :
-                        ""
-                    }
-
-
-                  </div>
-
-
-
-
-                  <div
-                    class="google-review-footer"
-                  >
-
-
-                    <span
-                      class="google-review-source"
-                    >
-
-                      <i
-                        class="bi bi-google"
-                        aria-hidden="true"
-                      ></i>
-
-                      Google Review
-
-                    </span>
-
-
-
-                    <span>
-                      Saheed Sons
-                    </span>
-
-
-                  </div>
-
-
-                </article>
-
-
-              </div>
-
-            `;
-
-
-          }
-
-        ).join("");
-
-
-
-
-      indicators.innerHTML =
-        reviews.map(
-          (review, index) => {
-
-
-            return `
-
-              <button
-                type="button"
-                data-bs-target="#googleReviewsCarousel"
-                data-bs-slide-to="${index}"
-                class="${index === 0 ? "active" : ""}"
-                ${
-                  index === 0
-                    ? 'aria-current="true"'
-                    : ""
-                }
-                aria-label="Google review ${index + 1}"
-              ></button>
-
-            `;
-
-
-          }
-
-        ).join("");
-
-
-
-
-      setupReviewReadMore();
-
-
-
-
-      if (
-        typeof bootstrap !== "undefined"
-        &&
-        bootstrap.Carousel
-      ) {
-
-
-        bootstrap.Carousel.getOrCreateInstance(
-          carousel,
-          {
-
-            interval: 5500,
-
-            ride: "carousel",
-
-            pause: "hover",
-
-            touch: true,
-
-            wrap: true
-
-          }
-        );
-
-
-      }
-
-
-    }
-
-
-
-
-
-    document.addEventListener(
-      "DOMContentLoaded",
-      renderGoogleReviews
-    );
-
-
-  </script>
 
 </body>
 

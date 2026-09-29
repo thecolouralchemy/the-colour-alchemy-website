@@ -598,14 +598,13 @@ function applyUrlFilters() {
     categorySelect
   ) {
     const legacyCategoryMap = {
-      "Brushes": "Paint Tools",
-      "Handmade Sinks": "Sinks & Taps",
-      "Stainless-Steel Taps": "Sinks & Taps",
-      "Primers": "Primer & Sealer",
-      "Wall Fillers": "Wall Preparation",
-      "Metal Finishes": "Metal Protection",
-      "Surface Preparation": "Cleaner",
-      "Adhesives & Repair": "Adhesive"
+      "Paint Tools": "Brushes",
+      "Sinks & Taps": "group:beyond",
+      "Primer & Sealer": "Primers",
+      "Wall Preparation": "Wall Fillers",
+      "Wood Care": "Wood Finishes",
+      "Wood Coating": "Wood Finishes",
+      "Metal Protection": "Metal Finishes"
     };
 
 
@@ -645,23 +644,6 @@ function applyUrlFilters() {
 }
 
 
-function debounce(callback, wait = 140) {
-  let timer = null;
-
-  return (...args) => {
-    window.clearTimeout(timer);
-    timer = window.setTimeout(
-      () => callback(...args),
-      wait
-    );
-  };
-}
-
-
-const renderCatalogueFromSearch =
-  debounce(renderCatalogue, 140);
-
-
 document.addEventListener(
   "DOMContentLoaded",
   () => {
@@ -698,14 +680,23 @@ document.addEventListener(
     renderCatalogue();
 
 
-    document
-      .getElementById(
+    const searchInput =
+      document.getElementById(
         "filter-search"
-      )
-      ?.addEventListener(
-        "input",
-        renderCatalogueFromSearch
       );
+
+    let searchTimer = null;
+
+    searchInput?.addEventListener(
+      "input",
+      () => {
+        window.clearTimeout(searchTimer);
+        searchTimer = window.setTimeout(
+          renderCatalogue,
+          140
+        );
+      }
+    );
 
 
     document

@@ -3393,680 +3393,6 @@ button.active {
   }
 }
 /* =========================================================
-   GOOGLE REVIEWS — PREMIUM SLIDER
-   ========================================================= */
-
-.google-reviews-section {
-  position: relative;
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(196, 151, 65, 0.13),
-      transparent 38%
-    ),
-    #0d0d0d;
-}
-
-
-.google-reviews-section::before {
-  content: "";
-
-  position: absolute;
-
-  width: 560px;
-  height: 560px;
-
-  left: 50%;
-  top: -390px;
-
-  transform: translateX(-50%);
-
-  border-radius: 50%;
-
-  background:
-    rgba(196, 151, 65, 0.10);
-
-  filter: blur(90px);
-
-  pointer-events: none;
-}
-
-
-.google-reviews-section .container {
-  position: relative;
-  z-index: 1;
-}
-
-
-.google-review-heading {
-  max-width: 720px;
-
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-.google-review-heading p {
-  max-width: 620px;
-
-  margin-left: auto;
-  margin-right: auto;
-
-  color: var(--color-text-muted);
-}
-
-
-.google-review-badge {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 0.55rem;
-
-  margin-top: 1rem;
-
-  padding: 0.5rem 0.85rem;
-
-  border: 1px solid rgba(255, 255, 255, 0.10);
-
-  border-radius: 999px;
-
-  background:
-    rgba(255, 255, 255, 0.035);
-
-  color:
-    rgba(255, 255, 255, 0.78);
-
-  font-size: 0.82rem;
-}
-
-
-.google-review-badge .bi-google {
-  color: #ffffff;
-}
-
-
-
-/* =========================================================
-   REVIEW CARD
-   ========================================================= */
-
-.google-review-card {
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: space-between;
-
-  width: min(100%, 850px);
-
-  min-height: 300px;
-
-  margin: 0 auto;
-
-  padding:
-    clamp(
-      1.4rem,
-      3vw,
-      2.4rem
-    );
-
-  border:
-    1px solid
-    rgba(
-      255,
-      255,
-      255,
-      0.09
-    );
-
-  border-radius: 24px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.055),
-      rgba(255, 255, 255, 0.018)
-    );
-
-  box-shadow:
-    0 22px 70px
-    rgba(
-      0,
-      0,
-      0,
-      0.30
-    );
-
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-
-.google-review-card:hover {
-  transform:
-    translateY(-5px);
-
-  border-color:
-    rgba(
-      196,
-      151,
-      65,
-      0.42
-    );
-
-  box-shadow:
-    0 28px 80px
-    rgba(
-      0,
-      0,
-      0,
-      0.38
-    );
-}
-
-
-
-/* =========================================================
-   REVIEW CUSTOMER
-   ========================================================= */
-
-.google-review-top {
-  display: flex;
-
-  align-items: center;
-
-  gap: 1rem;
-
-  margin-bottom: 1.25rem;
-}
-
-
-.google-review-avatar {
-  width: 54px;
-  height: 54px;
-
-  flex:
-    0 0 54px;
-
-  display: grid;
-
-  place-items: center;
-
-  border-radius: 50%;
-
-  background:
-    linear-gradient(
-      135deg,
-      #e0b55f,
-      #8f6927
-    );
-
-  color: #111;
-
-  font-weight: 700;
-
-  font-size: 1rem;
-
-  box-shadow:
-    0 8px 24px
-    rgba(
-      0,
-      0,
-      0,
-      0.25
-    );
-}
-
-
-.google-review-name {
-  margin:
-    0 0 0.2rem;
-
-  color: #ffffff;
-
-  font-size: 1rem;
-
-  font-weight: 600;
-}
-
-
-.google-review-meta {
-  display: flex;
-
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap:
-    0.45rem
-    0.7rem;
-}
-
-
-.google-review-stars {
-  color: #fbbc04;
-
-  letter-spacing: 0.08em;
-
-  font-size: 0.82rem;
-}
-
-
-.google-review-date {
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.48
-    );
-
-  font-size: 0.75rem;
-}
-
-
-
-/* =========================================================
-   REVIEW TEXT
-   ========================================================= */
-
-.google-review-text {
-  margin: 0;
-
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.78
-    );
-
-  font-size:
-    clamp(
-      0.95rem,
-      1.3vw,
-      1.08rem
-    );
-
-  line-height: 1.8;
-}
-
-
-
-/* =========================================================
-   REVIEW FOOTER
-   ========================================================= */
-
-.google-review-footer {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 1rem;
-
-  margin-top: 1.5rem;
-
-  padding-top: 1.1rem;
-
-  border-top:
-    1px solid
-    rgba(
-      255,
-      255,
-      255,
-      0.07
-    );
-
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.50
-    );
-
-  font-size: 0.78rem;
-}
-
-
-.google-review-source {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 0.5rem;
-}
-
-
-.google-review-source .bi-google {
-  color: #ffffff;
-}
-
-
-
-/* =========================================================
-   CAROUSEL
-   ========================================================= */
-
-#googleReviewsCarousel {
-  padding:
-    0.5rem
-    3.8rem
-    1rem;
-}
-
-
-.google-review-control {
-  width: 46px;
-
-  opacity: 1;
-}
-
-
-.google-review-control-icon {
-  display: grid;
-
-  place-items: center;
-
-  width: 44px;
-  height: 44px;
-
-  border:
-    1px solid
-    rgba(
-      196,
-      151,
-      65,
-      0.40
-    );
-
-  border-radius: 50%;
-
-  background:
-    rgba(
-      9,
-      9,
-      9,
-      0.88
-    );
-
-  color: #d4a650;
-
-  backdrop-filter:
-    blur(12px);
-
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    color 0.25s ease;
-}
-
-
-.google-review-control:hover
-.google-review-control-icon {
-  transform:
-    scale(1.06);
-
-  background:
-    #c49741;
-
-  color: #111;
-}
-
-
-
-/* =========================================================
-   INDICATORS
-   ========================================================= */
-
-.google-review-indicators {
-  position: static;
-
-  margin:
-    1.4rem
-    0
-    0;
-}
-
-
-.google-review-indicators
-[data-bs-target] {
-  width: 22px;
-  height: 3px;
-
-  margin:
-    0
-    4px;
-
-  border: 0;
-
-  border-radius: 99px;
-
-  background-color:
-    rgba(
-      255,
-      255,
-      255,
-      0.25
-    );
-
-  opacity: 1;
-}
-
-
-.google-review-indicators
-.active {
-  background-color:
-    #c49741;
-}
-
-
-
-/* =========================================================
-   EMPTY / BEFORE REVIEWS ARE ADDED
-   ========================================================= */
-
-.google-review-empty {
-  width:
-    min(
-      100%,
-      760px
-    );
-
-  margin:
-    0 auto;
-
-  padding: 2rem;
-
-  text-align: center;
-
-  border:
-    1px solid
-    rgba(
-      255,
-      255,
-      255,
-      0.09
-    );
-
-  border-radius: 22px;
-
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      0.025
-    );
-}
-
-
-.google-review-empty > i {
-  display: inline-grid;
-
-  place-items: center;
-
-  width: 48px;
-  height: 48px;
-
-  margin-bottom: 1rem;
-
-  border-radius: 50%;
-
-  background:
-    rgba(
-      196,
-      151,
-      65,
-      0.12
-    );
-
-  color:
-    #d4a650;
-
-  font-size:
-    1.25rem;
-}
-
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-.google-review-actions {
-  display: flex;
-
-  justify-content: center;
-
-  flex-wrap: wrap;
-
-  gap: 0.85rem;
-
-  margin-top: 2rem;
-}
-
-
-.btn-google-review {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 0.55rem;
-
-  min-height: 46px;
-
-  padding:
-    0.72rem
-    1.2rem;
-
-  border:
-    1px solid
-    #c49741;
-
-  border-radius: 8px;
-
-  background:
-    #c49741;
-
-  color:
-    #111;
-
-  font-weight: 600;
-
-  text-decoration: none;
-
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease;
-}
-
-
-.btn-google-review:hover {
-  transform:
-    translateY(-2px);
-
-  background:
-    #d5aa55;
-
-  color:
-    #111;
-}
-
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 767.98px) {
-
-  #googleReviewsCarousel {
-    padding:
-      0.25rem
-      1.5rem
-      0.75rem;
-  }
-
-
-  .google-review-card {
-    min-height: 330px;
-
-    border-radius: 18px;
-  }
-
-
-  .google-review-control {
-    width: 34px;
-  }
-
-
-  .google-review-control-icon {
-    width: 34px;
-    height: 34px;
-  }
-
-
-  .google-review-actions
-  .btn-alchemy-outline,
-
-  .google-review-actions
-  .btn-google-review {
-    width:
-      min(
-        100%,
-        310px
-      );
-  }
-
-}
-
-
-
-/* Reduce animation for accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .google-review-card,
-
-  .google-review-control-icon,
-
-  .btn-google-review {
-    transition: none;
-  }
-
-}
-
-/* =========================================================
    RIGHT SIDE — ALCHY IMAGE ON CLEAN WHITE BACKGROUND
    ========================================================= */
 
@@ -7343,115 +6669,124 @@ optgroup {
 }
 
 /* =========================================================
-   FINAL DEPLOYMENT POLISH
-   404, inspiration CTA and catalogue mobile usability
+   FINAL PRODUCTION POLISH
    ========================================================= */
 
-.error-page {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 2rem 0;
-  background:
-    radial-gradient(circle at 18% 18%, rgba(201, 160, 99, 0.08), transparent 26%),
-    radial-gradient(circle at 84% 76%, rgba(74, 144, 217, 0.07), transparent 28%),
-    var(--color-bg);
+/* Verified Google feedback links — no duplicated review text. */
+.google-feedback-section {
+  background: #0d0d0d;
 }
 
-.error-page-card {
-  width: min(760px, 100%);
-  margin: 0 auto;
-  padding: clamp(2rem, 5vw, 4rem);
-  text-align: center;
+.google-feedback-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(1.6rem, 3vw, 2.4rem);
   border: 1px solid rgba(244, 241, 234, 0.12);
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(20, 19, 18, 0.98), rgba(11, 11, 11, 0.98));
-  box-shadow: 0 30px 75px -48px rgba(0, 0, 0, 0.95);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(201,160,99,.07), rgba(255,255,255,.02));
+  box-shadow: 0 24px 60px -46px rgba(0,0,0,.95);
 }
 
-.error-page-logo {
-  display: inline-grid;
-  place-items: center;
-  width: 92px;
-  height: 92px;
-  margin-bottom: 1.35rem;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 1px solid rgba(201, 160, 99, 0.28);
-  background: #0a0a0a;
-}
-
-.error-page-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.error-page-card h1 {
+.google-feedback-card > div:first-child {
   max-width: 650px;
-  margin: 0 auto;
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  line-height: 1.05;
 }
 
-.error-page-card p {
-  max-width: 590px;
-  margin: 1.15rem auto 1.65rem;
-}
-
-.error-page-spectrum {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.error-page-actions {
+.google-feedback-actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.7rem;
+  justify-content: flex-end;
+  gap: .75rem;
+  flex: 0 0 auto;
 }
 
+/* Homepage four-action hero stays tidy on narrower desktop widths. */
+.home-hero-actions .btn-alchemy-primary,
+.home-hero-actions .btn-alchemy-outline {
+  min-height: 46px;
+}
+
+/* Inspiration can expose the full path from idea to enquiry without overflow. */
 .inspiration-cta-actions {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
+  gap: .6rem;
 }
 
 .inspiration-cta-actions .btn-alchemy-primary,
 .inspiration-cta-actions .btn-alchemy-outline {
-  width: 100%;
-  padding-left: 0.85rem;
-  padding-right: 0.85rem;
+  flex: 1 1 145px;
+}
+
+/* Product filters: comfortable touch targets and robust wrapping. */
+.filter-bar .form-control,
+.filter-bar .form-select,
+#filter-clear {
+  min-height: 46px;
+}
+
+/* 404 actions use the same button language as the rest of the site. */
+.error-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .75rem;
+}
+
+/* Prevent long user-facing content from forcing horizontal scrolling. */
+.product-name,
+.product-desc,
+.contact-line a,
+.contact-faq-question,
+.quote-form .form-control,
+.quote-form .form-select {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 991.98px) {
+  .google-feedback-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .google-feedback-actions {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 767.98px) {
-  .filter-bar .row > [class*="col-"] {
+  .home-hero-actions .btn-alchemy-primary,
+  .home-hero-actions .btn-alchemy-outline {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .google-feedback-actions {
     width: 100%;
   }
 
-  .filter-bar #filter-clear {
-    min-height: 46px;
-  }
-
-  .inspiration-cta-actions {
-    grid-template-columns: 1fr;
+  .google-feedback-actions .btn-alchemy-primary,
+  .google-feedback-actions .btn-alchemy-outline {
+    width: 100%;
   }
 }
 
 @media (max-width: 575.98px) {
-  .error-page-card {
-    padding: 1.6rem 1rem;
-    border-radius: 16px;
-  }
-
-  .error-page-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .error-page-actions .btn-alchemy-primary,
-  .error-page-actions .btn-alchemy-outline {
+  .filter-bar .col-6 {
     width: 100%;
+  }
+
+  .filter-bar {
+    padding: 1rem;
+  }
+
+  .product-card .product-actions {
+    flex-direction: column;
+  }
+
+  .product-card .product-actions .btn-alchemy-outline,
+  .product-card .product-actions .btn-whatsapp-solid {
+    width: 100%;
+    flex: none;
   }
 }
 
