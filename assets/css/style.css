@@ -7341,3 +7341,117 @@ optgroup {
   }
 
 }
+
+/* =========================================================
+   FINAL DEPLOYMENT POLISH
+   404, inspiration CTA and catalogue mobile usability
+   ========================================================= */
+
+.error-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(201, 160, 99, 0.08), transparent 26%),
+    radial-gradient(circle at 84% 76%, rgba(74, 144, 217, 0.07), transparent 28%),
+    var(--color-bg);
+}
+
+.error-page-card {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  border: 1px solid rgba(244, 241, 234, 0.12);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(20, 19, 18, 0.98), rgba(11, 11, 11, 0.98));
+  box-shadow: 0 30px 75px -48px rgba(0, 0, 0, 0.95);
+}
+
+.error-page-logo {
+  display: inline-grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  margin-bottom: 1.35rem;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 160, 99, 0.28);
+  background: #0a0a0a;
+}
+
+.error-page-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.error-page-card h1 {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.05;
+}
+
+.error-page-card p {
+  max-width: 590px;
+  margin: 1.15rem auto 1.65rem;
+}
+
+.error-page-spectrum {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.inspiration-cta-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+}
+
+.inspiration-cta-actions .btn-alchemy-primary,
+.inspiration-cta-actions .btn-alchemy-outline {
+  width: 100%;
+  padding-left: 0.85rem;
+  padding-right: 0.85rem;
+}
+
+@media (max-width: 767.98px) {
+  .filter-bar .row > [class*="col-"] {
+    width: 100%;
+  }
+
+  .filter-bar #filter-clear {
+    min-height: 46px;
+  }
+
+  .inspiration-cta-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .error-page-card {
+    padding: 1.6rem 1rem;
+    border-radius: 16px;
+  }
+
+  .error-page-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .error-page-actions .btn-alchemy-primary,
+  .error-page-actions .btn-alchemy-outline {
+    width: 100%;
+  }
+}
+

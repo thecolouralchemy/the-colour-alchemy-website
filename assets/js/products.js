@@ -256,35 +256,35 @@ const PRODUCTS = [
      IDs 34–41 are intentionally unused.
      ======================================================= */
 
-  {"id":42,"brand":"Asian Paints Causeway","name":"Royale Shyne","category":"Interior Paint","subcategory":"Premium Interior Emulsion","description":"Premium interior emulsion positioned for a smooth sheen, stain resistance and a refined decorative finish.","image":"","sizes":[],"featured":true,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":42,"brand":"Causeway","name":"Royale Shyne","category":"Interior Paint","subcategory":"Premium Interior Emulsion","description":"Premium interior emulsion positioned for a smooth sheen, stain resistance and a refined decorative finish.","image":"","sizes":[],"featured":true,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":43,"brand":"Asian Paints Causeway","name":"Royale Smart Clean","category":"Interior Paint","subcategory":"Washable Interior Emulsion","description":"Interior wall paint designed around water-beading, stain resistance and durable colour performance.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":43,"brand":"Causeway","name":"Royale Smart Clean","category":"Interior Paint","subcategory":"Washable Interior Emulsion","description":"Interior wall paint designed around water-beading, stain resistance and durable colour performance.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":44,"brand":"Asian Paints Causeway","name":"Classique Apcolite Interior Emulsion","category":"Interior Paint","subcategory":"Interior Emulsion","description":"Interior emulsion designed for excellent hiding, good coverage and easy touch-up on prepared walls.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":44,"brand":"Causeway","name":"Classique Apcolite Interior Emulsion","category":"Interior Paint","subcategory":"Interior Emulsion","description":"Interior emulsion designed for excellent hiding, good coverage and easy touch-up on prepared walls.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":45,"brand":"Asian Paints Causeway","name":"Apex Ultima","category":"Exterior Paint","subcategory":"Premium Exterior Emulsion","description":"Premium exterior emulsion developed for sun, dirt and algae resistance in Sri Lankan conditions.","image":"","sizes":[],"featured":true,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":45,"brand":"Causeway","name":"Apex Ultima","category":"Exterior Paint","subcategory":"Premium Exterior Emulsion","description":"Premium exterior emulsion developed for sun, dirt and algae resistance in Sri Lankan conditions.","image":"","sizes":[],"featured":true,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":46,"brand":"Asian Paints Causeway","name":"Apex Shield","category":"Exterior Paint","subcategory":"Exterior Emulsion","description":"Advanced acrylic exterior emulsion developed for longer colour stay and resistance to UV, dirt and algae.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":46,"brand":"Causeway","name":"Apex Shield","category":"Exterior Paint","subcategory":"Exterior Emulsion","description":"Advanced acrylic exterior emulsion developed for longer colour stay and resistance to UV, dirt and algae.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":47,"brand":"Asian Paints Causeway","name":"Kenlux Premium Gloss Enamel","category":"Enamel Paint","subcategory":"Gloss Enamel","description":"Gloss enamel for interior and exterior surfaces, offering a shiny, washable decorative finish.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":47,"brand":"Causeway","name":"Kenlux Premium Gloss Enamel","category":"Enamel Paint","subcategory":"Gloss Enamel","description":"Gloss enamel for interior and exterior surfaces, offering a shiny, washable decorative finish.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":48,"brand":"Asian Paints Causeway","name":"Kenlux Egg Shell Paint","category":"Enamel Paint","subcategory":"Eggshell Finish","description":"Oil-based washable eggshell paint suitable for wood, walls, steel gates and selected metal surfaces.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":48,"brand":"Causeway","name":"Kenlux Egg Shell Paint","category":"Enamel Paint","subcategory":"Eggshell Finish","description":"Oil-based washable eggshell paint suitable for wood, walls, steel gates and selected metal surfaces.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":49,"brand":"Asian Paints Causeway","name":"Kenlux Quick Drying Floor Paint","category":"Floor Paint","subcategory":"Floor Coating","description":"Quick-drying floor paint for suitable cement, concrete, stone, brick, wood and tiled floors.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":49,"brand":"Causeway","name":"Kenlux Quick Drying Floor Paint","category":"Floor Paint","subcategory":"Floor Coating","description":"Quick-drying floor paint for suitable cement, concrete, stone, brick, wood and tiled floors.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":50,"brand":"Asian Paints Causeway","name":"Kenlux Anticorrosive Paint","category":"Metal Protection","subcategory":"Anti-Corrosive Paint","description":"Alkyd-based anti-corrosive coating with good adhesion and a glossy finish for suitable metal surfaces.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":50,"brand":"Causeway","name":"Kenlux Anticorrosive Paint","category":"Metal Protection","subcategory":"Anti-Corrosive Paint","description":"Alkyd-based anti-corrosive coating with good adhesion and a glossy finish for suitable metal surfaces.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":51,"brand":"Asian Paints Causeway","name":"Kenlux Hammer Finish","category":"Metal Protection","subcategory":"Hammer Finish","description":"Quick-drying decorative metal coating with a hammer-effect finish and resistance to scratches and abrasion.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":51,"brand":"Causeway","name":"Kenlux Hammer Finish","category":"Metal Protection","subcategory":"Hammer Finish","description":"Quick-drying decorative metal coating with a hammer-effect finish and resistance to scratches and abrasion.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":52,"brand":"Asian Paints Causeway","name":"Kenlux Epoxy Floor Paint","category":"Floor Paint","subcategory":"Two-Pack Floor Coating","description":"Durable two-pack epoxy floor paint for suitable cement, concrete, tiled and light-duty commercial floors.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":52,"brand":"Causeway","name":"Kenlux Epoxy Floor Paint","category":"Floor Paint","subcategory":"Two-Pack Floor Coating","description":"Durable two-pack epoxy floor paint for suitable cement, concrete, tiled and light-duty commercial floors.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":53,"brand":"Asian Paints Causeway","name":"SmartCare Crack Seal","category":"Waterproofing","subcategory":"Crack Filler","description":"Flexible crack-filling compound designed to help stop water ingress through small wall cracks.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":53,"brand":"Causeway","name":"SmartCare Crack Seal","category":"Waterproofing","subcategory":"Crack Filler","description":"Flexible crack-filling compound designed to help stop water ingress through small wall cracks.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":54,"brand":"Asian Paints Causeway","name":"SmartCare Damp Seal Exterior","category":"Waterproofing","subcategory":"Waterproofing Undercoat","description":"Waterproofing undercoat designed for vertical walls with crack-bridging and water-ingress protection.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":54,"brand":"Causeway","name":"SmartCare Damp Seal Exterior","category":"Waterproofing","subcategory":"Waterproofing Undercoat","description":"Waterproofing undercoat designed for vertical walls with crack-bridging and water-ingress protection.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":55,"brand":"Asian Paints Causeway","name":"APC Damp Block 2K","category":"Waterproofing","subcategory":"Two-Part Waterproofing","description":"Two-component waterproofing coating for wet areas, tanks and other prepared cementitious surfaces.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":55,"brand":"Causeway","name":"APC Damp Block 2K","category":"Waterproofing","subcategory":"Two-Part Waterproofing","description":"Two-component waterproofing coating for wet areas, tanks and other prepared cementitious surfaces.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
-  {"id":56,"brand":"Asian Paints Causeway","name":"Damp Proof Fibre Tech","category":"Waterproofing","subcategory":"Terrace Waterproofing","description":"Glass-fibre-reinforced elastomeric waterproofing membrane for terraces and vertical surfaces.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
+  {"id":56,"brand":"Causeway","name":"Damp Proof Fibre Tech","category":"Waterproofing","subcategory":"Terrace Waterproofing","description":"Glass-fibre-reinforced elastomeric waterproofing membrane for terraces and vertical surfaces.","image":"","sizes":[],"featured":false,"availability":"Contact us for current price, shade and availability.","fallbackImage":""},
 
 
   /* =======================================================
@@ -338,61 +338,53 @@ const PRODUCTS = [
    clearer customer-facing catalogue structure.
    ========================================================= */
 
-const PRODUCT_CATEGORY_MAP = {
-  "Interior Paint": "Interior Paint",
-  "Exterior Paint": "Exterior Paint",
-  "Interior & Exterior Paint": "Interior & Exterior Paint",
-  "Primer & Sealer": "Primers",
-  "Wall Preparation": "Wall Fillers",
-  "Waterproofing": "Waterproofing",
-  "Wood Care": "Wood Finishes",
-  "Wood Coating": "Wood Finishes",
-  "Metal Protection": "Metal Finishes",
-  "Floor Paint": "Floor Paint",
-  "Enamel Paint": "Enamel Paint",
-  "Cleaner": "Surface Preparation",
-  "Adhesive": "Adhesives & Repair",
-  "Paint Accessories": "Paint Accessories",
-  "Paint Tools": "Brushes",
-  "Sinks & Taps": "Beyond Colour"
-};
-
-function getCatalogueCategory(product) {
-  if (
-    product.category === "Sinks & Taps"
-    &&
-    /sink/i.test(product.name)
-  ) {
-    return "Handmade Sinks";
+const PRODUCT_CATEGORY_GROUPS = [
+  {
+    label: "Paint & Coatings",
+    value: "paint",
+    categories: [
+      "Interior Paint",
+      "Exterior Paint",
+      "Interior & Exterior Paint",
+      "Primer & Sealer",
+      "Wall Preparation",
+      "Waterproofing",
+      "Wood Care",
+      "Wood Coating",
+      "Metal Protection",
+      "Enamel Paint",
+      "Floor Paint",
+      "Cleaner",
+      "Adhesive"
+    ]
+  },
+  {
+    label: "Accessories & Tools",
+    value: "accessories",
+    categories: [
+      "Paint Accessories",
+      "Paint Tools"
+    ]
+  },
+  {
+    label: "Beyond Colour",
+    value: "beyond",
+    categories: [
+      "Sinks & Taps"
+    ]
   }
-
-  if (
-    product.category === "Sinks & Taps"
-    &&
-    /tap/i.test(product.name)
-  ) {
-    return "Stainless-Steel Taps";
-  }
-
-  return PRODUCT_CATEGORY_MAP[product.category] || product.category;
-}
+];
 
 function getCatalogueGroup(product) {
-  const category = getCatalogueCategory(product);
-
   if (
-    category === "Brushes"
+    product.category === "Paint Accessories"
     ||
-    category === "Paint Accessories"
+    product.category === "Paint Tools"
   ) {
     return "accessories";
   }
 
-  if (
-    category === "Handmade Sinks"
-    ||
-    category === "Stainless-Steel Taps"
-  ) {
+  if (product.category === "Sinks & Taps") {
     return "beyond";
   }
 
@@ -403,23 +395,23 @@ const PRODUCT_KEYWORD_ALIASES = {
   "Interior Paint": ["interior", "inside", "wall paint", "rooms"],
   "Exterior Paint": ["exterior", "outside", "wall paint", "weather"],
   "Interior & Exterior Paint": ["interior", "exterior", "inside", "outside"],
-  "Primers": ["primer", "undercoat", "sealer", "surface preparation"],
-  "Wall Fillers": ["wall filler", "putty", "surface preparation", "filler"],
+  "Primer & Sealer": ["primer", "undercoat", "sealer", "surface preparation"],
+  "Wall Preparation": ["wall filler", "putty", "surface preparation", "filler"],
   "Waterproofing": ["waterproof", "damp", "water protection", "crack"],
-  "Wood Finishes": ["wood", "timber", "woodcare", "varnish", "wood finish"],
-  "Metal Finishes": ["metal", "steel", "anti-corrosive", "metal finish"],
+  "Wood Care": ["wood", "timber", "woodcare", "varnish", "wood finish"],
+  "Wood Coating": ["wood", "timber", "wood coating", "wood finish"],
+  "Metal Protection": ["metal", "steel", "anti-corrosive", "metal protection"],
   "Floor Paint": ["floor", "concrete floor", "cement floor", "floor coating"],
   "Enamel Paint": ["enamel", "gloss", "wood", "metal"],
-  "Surface Preparation": ["cleaner", "preparation", "surface treatment"],
-  "Adhesives & Repair": ["adhesive", "repair", "bonding"],
-  "Brushes": ["brush", "paint brush", "application tool"],
+  "Cleaner": ["cleaner", "preparation", "surface treatment"],
+  "Adhesive": ["adhesive", "repair", "bonding"],
+  "Paint Tools": ["brush", "paint brush", "roller", "application tool", "paint tool"],
   "Paint Accessories": ["paint accessory", "thinner", "finishing accessory"],
-  "Handmade Sinks": ["sink", "handmade sink", "kitchen sink", "bathroom sink"],
-  "Stainless-Steel Taps": ["tap", "stainless steel tap", "kitchen tap", "bathroom tap"]
+  "Sinks & Taps": ["sink", "handmade sink", "tap", "stainless steel tap", "kitchen", "bathroom"]
 };
 
 PRODUCTS.forEach((product) => {
-  product.catalogueCategory = getCatalogueCategory(product);
+  product.catalogueCategory = product.category;
   product.catalogueGroup = getCatalogueGroup(product);
 
   const suppliedKeywords =
@@ -438,7 +430,7 @@ PRODUCTS.forEach((product) => {
       : [];
 
   const aliasKeywords =
-    PRODUCT_KEYWORD_ALIASES[product.catalogueCategory] || [];
+    PRODUCT_KEYWORD_ALIASES[product.category] || [];
 
   product.keywords = [
     ...new Set(
@@ -453,7 +445,6 @@ PRODUCTS.forEach((product) => {
   ];
 });
 
-
 const PRODUCT_BRANDS = [
   ...new Set(
     PRODUCTS
@@ -462,49 +453,8 @@ const PRODUCT_BRANDS = [
   )
 ].sort();
 
-
-const PRODUCT_CATEGORY_GROUPS = [
-  {
-    label: "Paint",
-    value: "paint",
-    categories: [
-      "Interior Paint",
-      "Exterior Paint",
-      "Interior & Exterior Paint",
-      "Primers",
-      "Wall Fillers",
-      "Waterproofing",
-      "Wood Finishes",
-      "Metal Finishes",
-      "Floor Paint",
-      "Enamel Paint",
-      "Surface Preparation",
-      "Adhesives & Repair"
-    ]
-  },
-  {
-    label: "Accessories & Tools",
-    value: "accessories",
-    categories: [
-      "Brushes",
-      "Paint Accessories"
-    ]
-  },
-  {
-    label: "Beyond Colour",
-    value: "beyond",
-    categories: [
-      "Handmade Sinks",
-      "Stainless-Steel Taps"
-    ]
-  }
-];
-
-
 const PRODUCT_CATEGORIES = [
   ...new Set(
-    PRODUCTS.map(
-      (product) => product.catalogueCategory
-    )
+    PRODUCTS.map((product) => product.category)
   )
 ].sort();

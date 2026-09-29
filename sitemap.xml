@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.thecolouralchemy.lk/</loc>
-    <priority>1.0</priority>
+    <loc>https://thecolouralchemy.github.io/the-colour-alchemy-website/</loc>
   </url>
   <url>
-    <loc>https://www.thecolouralchemy.lk/products.html</loc>
-    <priority>0.9</priority>
+    <loc>https://thecolouralchemy.github.io/the-colour-alchemy-website/products.html</loc>
   </url>
   <url>
-    <loc>https://www.thecolouralchemy.lk/services.html</loc>
-    <priority>0.8</priority>
+    <loc>https://thecolouralchemy.github.io/the-colour-alchemy-website/colour-mixing.html</loc>
   </url>
   <url>
-    <loc>https://www.thecolouralchemy.lk/colour-mixing.html</loc>
-    <priority>0.8</priority>
+    <loc>https://thecolouralchemy.github.io/the-colour-alchemy-website/services.html</loc>
   </url>
   <url>
-    <loc>https://www.thecolouralchemy.lk/inspiration.html</loc>
-    <priority>0.8</priority>
+    <loc>https://thecolouralchemy.github.io/the-colour-alchemy-website/inspiration.html</loc>
   </url>
   <url>
-    <loc>https://www.thecolouralchemy.lk/about.html</loc>
-    <priority>0.6</priority>
+    <loc>https://thecolouralchemy.github.io/the-colour-alchemy-website/about.html</loc>
   </url>
   <url>
-    <loc>https://www.thecolouralchemy.lk/contact.html</loc>
-    <priority>0.7</priority>
+    <loc>https://thecolouralchemy.github.io/the-colour-alchemy-website/quotation.html</loc>
   </url>
   <url>
-    <loc>https://www.thecolouralchemy.lk/quotation.html</loc>
-    <priority>0.8</priority>
+    <loc>https://thecolouralchemy.github.io/the-colour-alchemy-website/contact.html</loc>
   </url>
 </urlset>

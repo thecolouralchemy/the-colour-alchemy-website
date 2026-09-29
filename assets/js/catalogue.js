@@ -515,9 +515,7 @@ function applyUrlFilters() {
 
 
   const brandParam =
-    rawBrandParam === "Causeway"
-      ? "Asian Paints Causeway"
-      : rawBrandParam;
+    rawBrandParam;
 
 
   const categoryParam =
@@ -600,13 +598,14 @@ function applyUrlFilters() {
     categorySelect
   ) {
     const legacyCategoryMap = {
-      "Paint Tools": "Brushes",
-      "Sinks & Taps": "group:beyond",
-      "Primer & Sealer": "Primers",
-      "Wall Preparation": "Wall Fillers",
-      "Wood Care": "Wood Finishes",
-      "Wood Coating": "Wood Finishes",
-      "Metal Protection": "Metal Finishes"
+      "Brushes": "Paint Tools",
+      "Handmade Sinks": "Sinks & Taps",
+      "Stainless-Steel Taps": "Sinks & Taps",
+      "Primers": "Primer & Sealer",
+      "Wall Fillers": "Wall Preparation",
+      "Metal Finishes": "Metal Protection",
+      "Surface Preparation": "Cleaner",
+      "Adhesives & Repair": "Adhesive"
     };
 
 
@@ -644,6 +643,23 @@ function applyUrlFilters() {
       searchParam;
   }
 }
+
+
+function debounce(callback, wait = 140) {
+  let timer = null;
+
+  return (...args) => {
+    window.clearTimeout(timer);
+    timer = window.setTimeout(
+      () => callback(...args),
+      wait
+    );
+  };
+}
+
+
+const renderCatalogueFromSearch =
+  debounce(renderCatalogue, 140);
 
 
 document.addEventListener(
@@ -688,7 +704,7 @@ document.addEventListener(
       )
       ?.addEventListener(
         "input",
-        renderCatalogue
+        renderCatalogueFromSearch
       );
 
 
